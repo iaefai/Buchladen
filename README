@@ -1,0 +1,16 @@
+Buchladen
+=========
+
+A usedbook advertising site for coursework in 60-311 at the University of Windsor.
+
+Group members:
+* Matt Clifford
+* Matt Renaud
+* Jeffrey Drake
+* Jeremy High
+* Stephen Nusko
+
+This project is being setup primarily with PyCharm from JetBrains, but can be used alone. A Python virtual environment with Python 3.3.2 and Django 1.5.4 is being assumed.
+
+
+
