@@ -1,0 +1,68 @@
+* Initial Interview - [2013/10/10]
+- Who will be using the system?
+- How many people will be using the system at a time?
+- Can the interface be a web application?
+- Other items besides textbooks?
+- What properties should a book have?
+  + [ ] Title
+  + [ ] Edition
+  + [ ] ISBN
+  + [ ] Author
+  + [ ] Condition
+  + [ ] Department
+  + [ ] Description
+- What fields should books be searchable by?
+  - Up to us.
+- Are there different levels of users? (Admin/Normal)
+  - Make a webmaster user.
+- Should the users be ranked based on past sales?
+  - Yes
+- Does the system have to handle communication between users?
+  - No, local campus.
+
+
+* Required Functionality
+** Register a new user.
+** Logout/Login.
+** Search for products.
+*** What fields to search by?
+** Purchase textbooks.
+** Sell textbooks.
+** Inventory manegement by the user.
+** Kijiji style
+** Rules for 
+
+
+* Milestone 1
+** Base Installation
+- Deployment docs.
+** User Representation
+- Design doc
+- Email Address
+- Books being sold
+- Rating
+** User Registration
+- Email Address Required
+- (possibly validate emails in future milestone)
+** User Login
+** User Logout
+** Basic CSS
+
+* Milestone 2
+** Book Storage
+- Design Doc
+- Title
+- Edition
+- ISBN
+- Author
+- Condition
+- Description
+** Posting Books for Sale
+** Removing Postings
+** Viewing All Books for Sale
+** Managing Books That Are Listed By You
+** Searching for Books
+
+* Milestone 3
+** Administative User
+** Refined CSS Layout
