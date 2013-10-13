@@ -22,29 +22,32 @@
 
 
 * Required Functionality
-** Register a new user.
-** Logout/Login.
-** Search for products.
-*** What fields to search by?
-** Purchase textbooks.
-** Sell textbooks.
-** Inventory manegement by the user.
-** Kijiji style
-** Rules for 
+  - Register a new user.
+  - Logout/Login.
+  - Search for products.
+    + What fields to search by?
+  - Purchase textbooks.
+  - Sell textbooks.
+  - Inventory manegement by the user.
+  - Kijiji style
+  - Rules for 
 
 
 * Milestone 1
+DEADLINE: <2013-10-25 Fri>
 ** Base Installation
+- Setup base Django application
 - Deployment docs.
 ** User Representation
-- Design doc
-- Email Address
+- Design doc for the model of users in the database.
+- Email Address will be used to sign up
 - Books being sold
 - Rating
 ** User Registration
 - Email Address Required
 - (possibly validate emails in future milestone)
 ** User Login
+- Login with email address.
 ** User Logout
 ** Basic CSS
 
@@ -58,11 +61,20 @@
 - Condition
 - Description
 ** Posting Books for Sale
+- Create new book associated with the user.
+- CAPTCHA (or something similar) to prevent bots.
 ** Removing Postings
+- 
 ** Viewing All Books for Sale
-** Managing Books That Are Listed By You
+- Itemized list.
+- Ability to sort by arbitrary field.
 ** Searching for Books
-
+- Search by arbitrary fields
+- Sort results after search
 * Milestone 3
 ** Administative User
+- Allow admin to remove content from anywhere on the site.
+- Allow admin to ban users from the site.
 ** Refined CSS Layout
+- Refine colours
+- Refine layout for easy of use
