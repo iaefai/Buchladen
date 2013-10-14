@@ -9,7 +9,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'Buchladen.views.home', name='home'),
     # url(r'^Buchladen/', include('Buchladen.foo.urls')),
 
-    url(r'^polls/', include('polls.urls')),
+    url(r'^polls/', include('polls.urls', namespace='polls')),
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
