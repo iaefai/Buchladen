@@ -41,11 +41,14 @@ DEADLINE: <2013-10-25 Fri>
 ** User Representation
 - Design doc for the model of users in the database.
 - Email Address will be used to sign up
+    - look at oauth2 based logins (openid)
 - Books being sold
 - Rating
+    - extend user model
 ** User Registration
 - Email Address Required
 - (possibly validate emails in future milestone)
+    - eliminated with facebook/google login
 ** User Login
 - Login with email address.
 ** User Logout
@@ -72,7 +75,7 @@ DEADLINE: <2013-10-25 Fri>
 - Search by arbitrary fields
 - Sort results after search
 * Milestone 3
-** Administative User
+** Administrative User
 - Allow admin to remove content from anywhere on the site.
 - Allow admin to ban users from the site.
 ** Refined CSS Layout
