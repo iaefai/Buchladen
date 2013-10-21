@@ -1,0 +1,97 @@
+#+TITLE: Iteration Report 1 - Team 10
+#+AUTHOR: Matt Clifford, Jeff Drake, Jeremy High, Stephen Nusko, Matt Renaud
+
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \setlist{nolistsep}
+
+
+* Iteration Report 1
+** Milestones
+
+*** Familiarization with Python and Django (In Progress)
+- Each group member started to explore the Django framework.
+- Any member not familiar with Python started this iteration.
+- Exploration of testing with Django.
+  
+*** Web App Prototype (In Progress)
+- A application prototype has been deployed with login functionality
+  and basic styling.
+
+*** User Model Design (Complete)
+- The data layout used to represent the user.
+
+*** Book Model Design (In Progress)
+- The data layout of the books to be sold is being developed.
+- Some final decisions on exact types to be used for some fields
+  still being discussed.
+
+
+** Deliverables
+*** Base Web App Setup (Complete)
+- The base website has been developed and deployed so that further
+  development can take place.
+
+*** Basic Website Styling and Formatting (Complete)
+- The base CSS for the web application has been written.
+- Simplistic design to ease usability.
+  
+** Meetings This Iteration
+- Team meeting the days preceeding te initial interview to discuss
+  requirements and questions to ask the client.
+- Meeting with professor on 2013-10-10 for initial interview.
+- Meetings on subsequent days to discuss design and implementation details.
+
+** Planned Meetings for Next Iteration
+- Every one to two days, with exceptions on weekends.
+
+** Upcoming Milestones
+
+
+
+** Upcoming Deliverables
+- Fully functional registration page.
+- Fully functional login page.
+- Test code for web app prototype.
+
+** Resourcse Usage
+- Resource usage has been as expected.
+  
+** Problems Encountered
+- Time constraints of group members have been difficult to work around.
+
+** Tasks For This Iteration For Each Member
+
+*** Clifford, Matt
+- Learning Django framework.
+
+*** Drake, Jeffrey
+- Deployed base Django application.
+- Design of user and book models.
+
+*** High, Jeremy
+- Learning Django framework.
+
+*** Nusko, Stephen
+- Learning Django framework and testing.
+
+*** Renaud, Matt
+- Learning Django framework.
+- Learning Redmine project management.
+- Wrote milestones and added issues to Redmine.
+  
+
+** Accomplishments This Iteration
+See Milestones and Deliverables
+
+** Tasks For Next Iterations
+- Continued learning of Django framework.
+- Complete design of book model.
+- Complete login and logout functionality.
+- Design and implement registration form for new users.
+- Implement test cases for basic functionality.
+- Revise web application CSS if needed.
+- Design and implement user profile page.
+- Allow users to post books for sale.
+- Implement basic book listings.
+  
+  
