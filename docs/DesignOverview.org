@@ -54,6 +54,8 @@ DEADLINE: <2013-10-25 Fri>
 ** User Logout
 ** Basic CSS
 
++++ use cases
+
 * Milestone 2
 ** Book Storage
 - Design Doc
