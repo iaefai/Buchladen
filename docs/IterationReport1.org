@@ -1,12 +1,16 @@
 #+TITLE: Iteration Report 1 - Team 10
 #+AUTHOR: Matt Clifford, Jeff Drake, Jeremy High, Stephen Nusko, Matt Renaud
 
+#+LATEX_HEADER: \addtolength{\textheight}{1in}
+#+LATEX_HEADER: \addtolength{\voffset}{-0.5in}
 #+LATEX_HEADER: \usepackage{enumitem}
 #+LATEX_HEADER: \setlist{nolistsep}
-
+#+LATEX_HEADER: \renewcommand\tableofcontents{\vspace{-5em}}
 
 * Iteration Report 1
 ** Milestones
+*** Addition of Tasks and Milestones to RedMine (Complete)
+- See https://redmine.cs.uwindsor.ca/projects/team10/issues for details.
 
 *** Familiarization with Python and Django (In Progress)
 - Each group member started to explore the Django framework.
@@ -28,10 +32,12 @@
 
 ** Deliverables
 *** Base Web App Setup (Complete)
+- Located at https://github.com/iaefai/Buchladen
 - The base website has been developed and deployed so that further
   development can take place.
 
 *** Basic Website Styling and Formatting (Complete)
+- Located at https://github.com/iaefai/Buchladen/tree/master/store/static/store
 - The base CSS for the web application has been written.
 - Simplistic design to ease usability.
   
@@ -43,11 +49,19 @@
 
 ** Planned Meetings for Next Iteration
 - Every one to two days, with exceptions on weekends.
-
+- Any decisions made about task to complete, milestones, design
+  decisions are located at
+  
+  https://github.com/iaefai/Buchladen/blob/master/docs/DesignOverview.org 
+  
 ** Upcoming Milestones
+*** Beta Version of Web App
+- Have most of the core functionality implemented.
+- Basic test suite for core functionality.
 
-
-
+*** Design Docs
+- Write well formatted and esthetically pleasing design docs.
+ 
 ** Upcoming Deliverables
 - Fully functional registration page.
 - Fully functional login page.
@@ -79,7 +93,6 @@
 - Learning Redmine project management.
 - Wrote milestones and added issues to Redmine.
   
-
 ** Accomplishments This Iteration
 See Milestones and Deliverables
 
@@ -95,3 +108,20 @@ See Milestones and Deliverables
 - Implement basic book listings.
   
   
+** Work Distribution
+|-----------------+---------------+------------+-------------+---------------+-------------|
+|                 | Matt Clifford | Jeff Drake | Jeremy High | Stephen Nusko | Matt Renaud |
+|-----------------+---------------+------------+-------------+---------------+-------------|
+| Python Brush Up |           20% |        20% |         20% |           20% |         20% |
+| Django Learning |           20% |        30% |         15% |           20% |         15% |
+| Base App        |            0% |       100% |          0% |            0% |          0% |
+| Architecture    |           10% |        30% |         10% |           10% |         40% |
+|                 |               |            |             |               |             |
+** References
+- Python Tutorial :: http://docs.python.org/3/tutorial/
+- Django Homepage :: https://www.djangoproject.com/
+- Source :: https://github.com/iaefai/Buchladen
+- RedMine :: https://redmine.cs.uwindsor.ca/projects/team10/
+     
+     
+     
