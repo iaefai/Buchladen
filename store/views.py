@@ -9,6 +9,7 @@ from django.views import generic
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render_to_response
 
+from store.models import Book
 
 from django import forms
 
@@ -58,3 +59,17 @@ def login_user(request):
                               {'state': state, 'username': username},
                               context_instance = RequestContext(request))
 
+
+def book_list(request):
+    state = "Booklist page..."
+    book_list = Book.objects.all()
+    return render_to_response('store/book_list.html',
+                              {'state': state, 'book_list': book_list})
+
+def contact_seller(request):
+    user = request.GET.get('id', 'NO_USER_SPECIFIED');
+    return render_to_response('store/contact_seller.html',
+                              {'user': user});
+        
+        
+        
