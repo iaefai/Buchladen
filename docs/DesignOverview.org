@@ -68,8 +68,10 @@ DEADLINE: <2013-10-25 Fri>
 ** Posting Books for Sale
 - Create new book associated with the user.
 - CAPTCHA (or something similar) to prevent bots.
+** Edit Postings
+- Allow user to edit a posting they already have.
 ** Removing Postings
-- 
+- Allow user to remove one of their postings.
 ** Viewing All Books for Sale
 - Itemized list.
 - Ability to sort by arbitrary field.
