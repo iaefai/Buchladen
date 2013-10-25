@@ -10,13 +10,16 @@ admin.autodiscover()
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browseable API.
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     # Examples:
     # url(r'^$', 'Buchladen.views.home', name='home'),
     # url(r'^Buchladen/', include('Buchladen.foo.urls')),
     url(r'^$', include('store.urls', namespace='store')),
     url(r'^login', 'store.views.login_user'),
     url(r'^polls/', include('polls.urls', namespace='polls')),
+    url(r'^booklist', 'store.views.book_list'),
+    url(r'^contact-seller', 'store.views.contact_seller'),
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
