@@ -129,7 +129,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'polls',
     'store',
-    'rest_framework',
+#    'rest_framework',
 )
 
 REST_FRAMEWORK = {
