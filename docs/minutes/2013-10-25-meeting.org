@@ -1,0 +1,34 @@
+* Group Meeting
+- Start Time :: 4:35
+- End Time :: 
+- Present :: Matt Clifford, Jeff Drake, Jeremy High, Matt Renaud
+- Absent :: Stephen Nusko (Research Meeting)
+
+** Familiarities With Django
+- Matt Clifford and Jeremy High have ...
+- Jeff Drake and Matt Renaud have adequate understanding.
+
+
+** Diagrams To Complete
+- Django flow control.
+- UML class diagram for models.
+- Use case diagrams:
+  + Browsing books on home page.
+  + Register for an account.
+  + Login.
+  + Logout.
+  + View current postings by user.
+  + Add new posting.
+  + Edit posting.
+  + Remove posting.
+  + Search for books.
+  + Admin panel.
+- Data flow diagram.
+  
+** Pages to Complete
+- Home page
+- Book listing page.
+- Contact user page.
+- User profile page.
+
+** Testing Suite
