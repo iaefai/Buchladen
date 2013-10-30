@@ -1,6 +1,6 @@
 * Group Meeting
 - Start Time :: 4:35
-- End Time :: 
+- End Time :: 7:00
 - Present :: Matt Clifford, Jeff Drake, Jeremy High, Matt Renaud
 - Absent :: Stephen Nusko (Research Meeting)
 
