@@ -78,6 +78,7 @@ DEADLINE: <2013-10-25 Fri>
 ** Searching for Books
 - Search by arbitrary fields
 - Sort results after search
+
 * Milestone 3
 ** Administrative User
 - Allow admin to remove content from anywhere on the site.

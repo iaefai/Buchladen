@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="549c3298-9525-4f4a-aebf-ca1b7a251b69" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/DesignOverview.org" afterPath="$PROJECT_DIR$/docs/DesignOverview.org" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/store/templates/store/index.html" afterPath="$PROJECT_DIR$/store/templates/store/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Buchladen/settings.py" afterPath="$PROJECT_DIR$/Buchladen/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Buchladen/urls.py" afterPath="$PROJECT_DIR$/Buchladen/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Buchladen.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,10 +32,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Buchladen/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="20" selection-start="2917" selection-end="2917" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="2730">
+            <state line="130" column="16" selection-start="4558" selection-end="4558" vertical-scroll-proportion="1.2464066" vertical-offset="1343" max-vertical-offset="2610">
               <folding />
             </state>
           </provider>
@@ -44,7 +44,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/store/templates/store/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="0" selection-start="693" selection-end="714" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1245">
+            <state line="20" column="0" selection-start="708" selection-end="729" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1260">
               <folding />
             </state>
           </provider>
@@ -62,16 +62,7 @@
       <file leaf-file-name="books.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/store/static/store/books.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="1" selection-start="227" selection-end="227" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="2175">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DesignOverview.org" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/DesignOverview.org">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="15" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.35897437" vertical-offset="633" max-vertical-offset="1365">
+            <state line="10" column="1" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="2175">
               <folding />
             </state>
           </provider>
@@ -80,7 +71,7 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/store/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="24" selection-start="955" selection-end="955" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="990">
+            <state line="32" column="24" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1215">
               <folding />
             </state>
           </provider>
@@ -89,7 +80,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/store/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="26" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="330">
+            <state line="5" column="7" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="375">
               <folding />
             </state>
           </provider>
@@ -107,7 +98,7 @@
       <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Buchladen/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="41" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="465">
+            <state line="26" column="41" selection-start="990" selection-end="990" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="510">
               <folding />
             </state>
           </provider>
@@ -116,7 +107,7 @@
       <file leaf-file-name="models.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/store/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="765">
+            <state line="30" column="0" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
               <folding />
             </state>
           </provider>
@@ -154,8 +145,8 @@
         <option value="$PROJECT_DIR$/store/models.py" />
         <option value="$PROJECT_DIR$/docs/DesignOverview.org" />
         <option value="$PROJECT_DIR$/store/templates/store/index.html" />
-        <option value="$PROJECT_DIR$/Buchladen/settings.py" />
         <option value="$PROJECT_DIR$/store/static/store/books.scss" />
+        <option value="$PROJECT_DIR$/Buchladen/settings.py" />
       </list>
     </option>
   </component>
@@ -219,7 +210,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -310,20 +300,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Buchladen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Buchladen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Buchladen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.2875" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="editor.preferences.smartKeys" />
+    <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../mit-tab/python27/bin/python" />
     <property name="FullScreen" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -426,27 +431,7 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Buchladen" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -472,7 +457,27 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Buchladen" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -581,18 +586,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="115" y="23" width="1325" height="873" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32994527" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2830336" sideWeight="0.72775567" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2877248" sideWeight="0.7298013" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991013" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27120823" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27019867" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -637,7 +642,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Buchladen/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="41" selection-start="878" selection-end="878" vertical-scroll-proportion="0.0" vertical-offset="345" max-vertical-offset="465">
+        <state line="26" column="41" selection-start="990" selection-end="990" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
@@ -651,7 +656,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/store/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="0" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0" vertical-offset="80" max-vertical-offset="750">
+        <state line="30" column="0" selection-start="984" selection-end="984" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
           <folding />
         </state>
       </provider>
@@ -668,7 +673,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/store/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="26" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+        <state line="5" column="7" selection-start="100" selection-end="100" vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="375">
           <folding />
         </state>
       </provider>
@@ -682,35 +687,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/store/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="24" selection-start="955" selection-end="955" vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="990">
+        <state line="32" column="24" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="1215">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/store/templates/store/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="693" selection-end="714" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="1245">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Buchladen/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="20" selection-start="2917" selection-end="2917" vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="2730">
+        <state line="20" column="0" selection-start="708" selection-end="729" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1260">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/store/static/store/books.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="1" selection-start="227" selection-end="227" vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="2175">
+        <state line="10" column="1" selection-start="227" selection-end="227" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="2175">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/DesignOverview.org">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="15" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.35897437" vertical-offset="633" max-vertical-offset="1365">
+        <state line="59" column="15" selection-start="1452" selection-end="1452" vertical-scroll-proportion="0.35897437" vertical-offset="633" max-vertical-offset="1365" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Buchladen/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="130" column="16" selection-start="4558" selection-end="4558" vertical-scroll-proportion="1.2464066" vertical-offset="1343" max-vertical-offset="2610">
           <folding />
         </state>
       </provider>
