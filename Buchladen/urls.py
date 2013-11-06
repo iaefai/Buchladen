@@ -16,6 +16,7 @@ urlpatterns = patterns(
     # url(r'^$', 'Buchladen.views.home', name='home'),
     # url(r'^Buchladen/', include('Buchladen.foo.urls')),
     url(r'^$', include('store.urls', namespace='store')),
+    url(r'^index', 'store.views.index'),
     url(r'^login', 'store.views.login_user'),
     url(r'^polls/', include('polls.urls', namespace='polls')),
     url(r'^booklist', 'store.views.book_list'),

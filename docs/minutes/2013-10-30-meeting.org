@@ -1,0 +1,21 @@
+* Group Meeting
+- Start Time :: 4:10
+- End Time :: 4:25
+- Present :: Jeff Drake, Jeremy High, Stephen Nusko, Matt Renaud
+- Absent :: Matt Clifford (In class)
+
+
+** Core Functionality for Prototype
+- Well presented book list.
+  + */booklist?orderby=price*
+  + */booklist?orderby=-price*
+- Search based on: Title, ISBN, Author
+  + */search/isbn/123456789*
+  + */search/author/some%20guy*
+  + */search/title/some%20title*
+
+
+** Further Use of Redmine
+- Add expected hours to tasks.
+- More usage of site by team members.
+  
