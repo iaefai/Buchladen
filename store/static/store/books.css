@@ -1,0 +1,106 @@
+html {
+  background: url("/static/store/books.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+body {
+  margin: 0; }
+
+.contentbox {
+  display: inline-block;
+  margin-left: 0.5em; }
+  .contentbox h1 {
+    font-size: 14pt; }
+  .contentbox h2 {
+    font-size: 10pt; }
+
+.actionbox {
+  display: block;
+  background-color: rgba(10, 10, 255, 0.4);
+  margin: 0.5em;
+  height: 3em;
+  text-align: center; }
+  .actionbox .centre {
+    font: bold 16pt/2em sans-serif; }
+
+.actionbox:hover {
+  background-color: rgba(10, 10, 255, 0.6); }
+
+.header {
+  display: block;
+  margin-left: 0px;
+  padding-left: 4em;
+  padding-right: 1em;
+  width: calc(100% - 5em);
+  margin-bottom: 2em;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  margin-top: 2em; }
+  .header h1 {
+    display: inline-block;
+    text-align: right;
+    margin-top: 0;
+    margin-bottom: 0; }
+  .header ul {
+    font-size: 12pt;
+    display: inline;
+    font-variant: smallcaps;
+    list-style-type: none;
+    float: right;
+    text-align: right; }
+    .header ul li {
+      display: inline; }
+
+#login {
+  width: 10em;
+  height: auto;
+  background-color: rgba(10, 10, 255, 0.4);
+  color: white;
+  font-weight: bold;
+  padding: 10px; }
+
+#login:hover {
+  background-color: rgba(10, 10, 255, 0.6); }
+
+section {
+  color: white;
+  padding-left: 4em; }
+  section h1 {
+    font-size: 24pt;
+    padding-left: 10px; }
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto; }
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px; }
+
+.form-signin .checkbox {
+  font-weight: normal; }
+
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.form-signin .form-control:focus {
+  z-index: 2; }
+
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0; }

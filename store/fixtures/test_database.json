@@ -1,0 +1,279 @@
+[
+
+
+
+
+
+    {
+        "pk": 1,
+        "model": "contenttypes.contenttype",
+        "fields":
+            {"name": "permission", "model": "permission", "app_label": "auth"}
+    },
+    {
+        "pk": 2,
+        "model": "contenttypes.contenttype",
+        "fields":
+            {"name": "group", "model": "group", "app_label": "auth"}
+    },
+    {
+        "pk": 3, "model": "contenttypes.contenttype",
+        "fields":
+            {"name": "user", "model": "user", "app_label": "auth"}
+    },
+    {
+        "pk": 4, "model": "contenttypes.contenttype",
+        "fields":
+            {"name": "content type", "model": "contenttype", "app_label": "contenttypes"}
+    },
+    {
+        "pk": 5,
+        "model": "contenttypes.contenttype",
+        "fields":
+            {"name": "session", "model": "session", "app_label": "sessions"}
+    },
+    {
+        "pk": 6,
+        "model": "contenttypes.contenttype",
+        "fields":
+            {"name": "site", "model": "site", "app_label": "sites"}
+    },
+    {
+        "pk": 7,
+        "model": "contenttypes.contenttype",
+        "fields":
+        {"name": "log entry", "model": "logentry", "app_label": "admin"}
+    },
+    {
+        "pk": 8, "model": "contenttypes.contenttype",
+        "fields": {"name": "poll", "model": "poll", "app_label": "polls"}
+    },
+    {
+        "pk": 9,
+        "model": "contenttypes.contenttype",
+        "fields":
+            {"name": "choice", "model": "choice", "app_label": "polls"}
+    },
+    {
+        "pk": 10, "model": "contenttypes.contenttype",
+        "fields":
+            {"name": "subject", "model": "subject", "app_label": "store"}
+    },
+    {
+        "pk": 11,
+        "model": "contenttypes.contenttype",
+        "fields":
+            {"name": "author", "model": "author", "app_label": "store"}
+    },
+    {
+        "pk": 12,
+        "model": "contenttypes.contenttype",
+        "fields":
+            {"name": "book", "model": "book", "app_label": "store"}
+    },
+    {
+        "pk": "0tyoqkrhrkcmjruw8n7852f050btc5o8",
+        "model": "sessions.session",
+        "fields":
+            {"session_data": "NGIxNDAzZGVlMjQyNjJkZjQzZGI5NWE2YmMzNjkzZDFhZTE5ZTVjYjp7Il9hdXRoX3VzZXJfaWQiOjEsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=", "expire_date": "2013-10-30T04:55:27.737Z"}
+    },
+    {
+        "pk": "j79ge7mg85q9cr3fgaf1cbk8pfzbzusn",
+        "model": "sessions.session",
+        "fields":
+            {"session_data": "ZDZmMTRmZjIxOGJkNWE5ZTZhZTI1NGRiODY2MTBhZTkyOTk0YzNiNTp7Il9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIiwiX2F1dGhfdXNlcl9pZCI6MX0=", "expire_date": "2013-11-02T20:13:03.648Z"}
+    },
+    {
+        "pk": "jhhknu65fti6416f33lb7phn7qy5ia5r",
+        "model": "sessions.session",
+        "fields":
+            {"session_data": "M2NmMTg1ZTVmMGI0Njc3NGM2ZTk0ODhhZTEyMDdlNjFiMGE2ZjlmMjp7InRlc3Rjb29raWUiOiJ3b3JrZWQifQ==", "expire_date": "2013-11-01T20:57:48.012Z"}
+    },
+    {
+        "pk": 1,
+        "model": "sites.site",
+        "fields":
+        {"domain": "example.com", "name": "example.com"}
+    },
+    {
+        "pk": 1,
+        "model": "polls.poll",
+        "fields":
+            {"question": "What's up?", "pub_date": "2013-10-11T04:29:49Z"}
+    },
+    {
+        "pk": 2,
+        "model": "polls.poll",
+        "fields":
+            {"question": "Who is your favoierjg?", "pub_date": "2013-10-14T07:07:04.638Z"}
+    },
+    {
+        "pk": 1,
+        "model": "polls.choice",
+        "fields":
+            {"poll": 1, "choice_text": "Not much", "votes": 1}
+    },
+    {
+        "pk": 2,
+        "model": "polls.choice",
+        "fields":
+            {"poll": 1, "choice_text": "Not much", "votes": 3}
+    },
+    {
+        "pk": 3,
+        "model": "polls.choice",
+        "fields":
+            {"poll": 1, "choice_text": "The sky", "votes": 3}
+    },
+    {
+        "pk": 1,
+        "model": "auth.permission",
+        "fields":
+            {"codename": "add_permission", "name": "Can add permission", "content_type": ["auth", "permission"]}
+    },
+    {
+        "pk": 2,
+        "model": "auth.permission",
+        "fields":
+            {"codename": "change_permission", "name": "Can change permission", "content_type": ["auth", "permission"]}
+    },
+    {
+        "pk": 3,
+        "model": "auth.permission",
+        "fields":
+            {"codename": "delete_permission", "name": "Can delete permission", "content_type": ["auth", "permission"]}
+    },
+    {
+        "pk": 4,
+        "model": "auth.permission",
+        "fields":
+            {"codename": "add_group", "name": "Can add group", "content_type": ["auth", "group"]}
+    },
+    {
+        "pk": 5,
+        "model": "auth.permission",
+        "fields":
+            {"codename": "change_group", "name": "Can change group", "content_type": ["auth", "group"]}
+    },
+    {
+        "pk": 6,
+        "model": "auth.permission",
+        "fields":
+            {"codename": "delete_group", "name": "Can delete group", "content_type": ["auth", "group"]}
+    },
+    {
+        "pk": 7,
+        "model": "auth.permission",
+        "fields":
+            {"codename": "add_user", "name": "Can add user", "content_type": ["auth", "user"]}
+    },
+    {
+        "pk": 8,
+        "model": "auth.permission",
+        "fields":
+            {"codename": "change_user", "name": "Can change user", "content_type": ["auth", "user"]}
+    },
+    {
+        "pk": 9, "model":
+        "auth.permission",
+        "fields":
+            {"codename": "delete_user", "name": "Can delete user", "content_type": ["auth", "user"]}
+    },
+    {
+        "pk": 10,
+        "model": "auth.permission",
+        "fields":
+            {"codename": "add_contenttype", "name": "Can add content type", "content_type": ["contenttypes", "contenttype"]}
+    },
+    {
+        "pk": 11,
+        "model": "auth.permission",
+        "fields":
+            {"codename": "change_contenttype", "name": "Can change content type", "content_type": ["contenttypes", "contenttype"]}
+    },
+    {
+        "pk": 12,
+        "model": "auth.permission",
+        "fields":
+            {"codename": "delete_contenttype", "name": "Can delete content type", "content_type": ["contenttypes", "contenttype"]}
+    },
+    {
+        "pk": 13,
+        "model": "auth.permission",
+        "fields":
+        {"codename": "add_session", "name": "Can add session", "content_type": ["sessions", "session"]}
+    },
+    {
+        "pk": 14,
+        "model": "auth.permission",
+        "fields":
+            {"codename": "change_session", "name": "Can change session", "content_type": ["sessions", "session"]}
+    },
+    {
+        "pk": 15,
+        "model": "auth.permission", "fields": {"codename": "delete_session", "name": "Can delete session", "content_type": ["sessions", "session"]}}, {"pk": 16, "model": "auth.permission", "fields": {"codename": "add_site", "name": "Can add site", "content_type": ["sites", "site"]}}, {"pk": 17, "model": "auth.permission", "fields": {"codename": "change_site", "name": "Can change site", "content_type": ["sites", "site"]}}, {"pk": 18, "model": "auth.permission", "fields": {"codename": "delete_site", "name": "Can delete site", "content_type": ["sites", "site"]}}, {"pk": 19, "model": "auth.permission", "fields": {"codename": "add_logentry", "name": "Can add log entry", "content_type": ["admin", "logentry"]}}, {"pk": 20, "model": "auth.permission", "fields": {"codename": "change_logentry", "name": "Can change log entry", "content_type": ["admin", "logentry"]}}, {"pk": 21, "model": "auth.permission", "fields": {"codename": "delete_logentry", "name": "Can delete log entry", "content_type": ["admin", "logentry"]}}, {"pk": 22, "model": "auth.permission", "fields": {"codename": "add_poll", "name": "Can add poll", "content_type": ["polls", "poll"]}}, {"pk": 23, "model": "auth.permission", "fields": {"codename": "change_poll", "name": "Can change poll", "content_type": ["polls", "poll"]}}, {"pk": 24, "model": "auth.permission", "fields": {"codename": "delete_poll", "name": "Can delete poll", "content_type": ["polls", "poll"]}}, {"pk": 25, "model": "auth.permission", "fields": {"codename": "add_choice", "name": "Can add choice", "content_type": ["polls", "choice"]}}, {"pk": 26, "model": "auth.permission", "fields": {"codename": "change_choice", "name": "Can change choice", "content_type": ["polls", "choice"]}}, {"pk": 27, "model": "auth.permission", "fields": {"codename": "delete_choice", "name": "Can delete choice", "content_type": ["polls", "choice"]}}, {"pk": 28, "model": "auth.permission", "fields": {"codename": "add_subject", "name": "Can add subject", "content_type": ["store", "subject"]}}, {"pk": 29, "model": "auth.permission", "fields": {"codename": "change_subject", "name": "Can change subject", "content_type": ["store", "subject"]}}, {"pk": 30, "model": "auth.permission", "fields": {"codename": "delete_subject", "name": "Can delete subject", "content_type": ["store", "subject"]}}, {"pk": 31, "model": "auth.permission", "fields": {"codename": "add_author", "name": "Can add author", "content_type": ["store", "author"]}}, {"pk": 32, "model": "auth.permission", "fields": {"codename": "change_author", "name": "Can change author", "content_type": ["store", "author"]}}, {"pk": 33, "model": "auth.permission", "fields": {"codename": "delete_author", "name": "Can delete author", "content_type": ["store", "author"]}}, {"pk": 34, "model": "auth.permission", "fields": {"codename": "add_book", "name": "Can add book", "content_type": ["store", "book"]}}, {"pk": 35, "model": "auth.permission", "fields": {"codename": "change_book", "name": "Can change book", "content_type": ["store", "book"]}}, {"pk": 36, "model": "auth.permission", "fields": {"codename": "delete_book", "name": "Can delete book", "content_type": ["store", "book"]}}, {"pk": 1, "model": "auth.user", "fields": {"user_permissions": [], "last_name": "", "is_active": true, "password": "pbkdf2_sha256$10000$WTFCqda9HzDE$1Ri+12WXvlZPrttemE38AlQ69ybUcd4GrKCIz+Ye0rY=", "date_joined": "2013-10-11T04:11:59.652Z", "groups": [], "email": "drakej@uwindsor.ca", "username": "drakej", "is_superuser": true, "is_staff": true, "last_login": "2013-10-19T20:13:03.643Z", "first_name": ""}}, {"pk": 2, "model": "auth.user", "fields": {"user_permissions": [["add_author", "store", "author"], ["change_author", "store", "author"], ["delete_author", "store", "author"], ["add_book", "store", "book"], ["change_book", "store", "book"], ["delete_book", "store", "book"], ["add_subject", "store", "subject"], ["change_subject", "store", "subject"], ["delete_subject", "store", "subject"]], "last_name": "User", "is_active": true, "password": "pbkdf2_sha256$10000$7ksju1S8DfHS$dRqUyXg3UbMNogmQYnPucgzAdeMGji1/wH8br7PU6pw=", "date_joined": "2013-10-15T23:51:58Z", "groups": [], "email": "drakej@uwindsor.ca", "username": "test", "is_superuser": false, "is_staff": false, "last_login": "2013-10-15T23:51:58Z", "first_name": "Test"}}, {"pk": 1, "model": "admin.logentry", "fields": {"action_flag": 2, "object_id": "1", "content_type": ["polls", "poll"], "action_time": "2013-10-11T04:29:57.158Z", "object_repr": "What's up?", "change_message": "Changed pub_date.", "user": ["drakej"]}}, {"pk": 2, "model": "admin.logentry", "fields": {"action_flag": 1, "object_id": "2", "content_type": ["auth", "user"], "action_time": "2013-10-15T23:51:58.635Z", "object_repr": "test", "change_message": "", "user": ["drakej"]}}, {"pk": 3, "model": "admin.logentry", "fields": {"action_flag": 2, "object_id": "2", "content_type": ["auth", "user"], "action_time": "2013-10-15T23:53:01.544Z", "object_repr": "test", "change_message": "Changed password, first_name, last_name, email and user_permissions.", "user": ["drakej"]}}, {"pk": 4, "model": "admin.logentry", "fields": {"action_flag": 1, "object_id": "1", "content_type": ["store", "author"], "action_time": "2013-10-15T23:54:21.983Z", "object_repr": "Author object", "change_message": "", "user": ["drakej"]}}, {"pk": 5, "model": "admin.logentry", "fields": {"action_flag": 1, "object_id": "1", "content_type": ["store", "subject"], "action_time": "2013-10-15T23:56:46.152Z", "object_repr": "Truth", "change_message": "", "user": ["drakej"]}}, {"pk": 6, "model": "admin.logentry", "fields": {"action_flag": 1, "object_id": "1", "content_type": ["store", "book"], "action_time": "2013-10-15T23:56:49.923Z", "object_repr": "Book object", "change_message": "", "user": ["drakej"]}}, {"pk": 7, "model": "admin.logentry", "fields": {"action_flag": 1, "object_id": "2", "content_type": ["store", "author"], "action_time": "2013-10-15T23:57:48.413Z", "object_repr": "Huck Pilgrim", "change_message": "", "user": ["drakej"]}}, {"pk": 8, "model": "admin.logentry", "fields": {"action_flag": 1, "object_id": "2", "content_type": ["store", "subject"], "action_time": "2013-10-15T23:58:20.463Z", "object_repr": "Fiction", "change_message": "", "user": ["drakej"]}}, {"pk": 9, "model": "admin.logentry", "fields": {"action_flag": 1, "object_id": "2", "content_type": ["store", "book"], "action_time": "2013-10-15T23:58:45.593Z", "object_repr": "Book object", "change_message": "", "user": ["drakej"]}}, {"pk": 10, "model": "admin.logentry", "fields": {"action_flag": 1, "object_id": "3", "content_type": ["store", "author"], "action_time": "2013-10-16T00:08:22.471Z", "object_repr": "Kevin Brooks", "change_message": "", "user": ["drakej"]}}, {"pk": 11, "model": "admin.logentry", "fields": {"action_flag": 1, "object_id": "3", "content_type": ["store", "book"], "action_time": "2013-10-16T00:08:57.344Z", "object_repr": "Book object", "change_message": "", "user": ["drakej"]}
+    },
+
+
+
+     {
+        "pk": 1,
+        "model": "store.subject",
+        "fields":
+            {"subject": "Truth"}
+    },
+    {
+        "pk": 2,
+        "model": "store.subject",
+        "fields":
+            {"subject": "Fiction"}
+    },
+    {
+        "pk": 3,
+        "model": "store.subject",
+        "fields":
+            {"subject": "Computer Science"}
+    },
+    {
+        "pk": 1,
+        "model": "store.author",
+        "fields":
+            {"name": "Anton Szandor Lavey"}
+    },
+    {
+        "pk": 2,
+        "model": "store.author",
+        "fields":
+            {"name": "Huck Pilgrim"}
+    },
+    {
+        "pk": 3,
+        "model": "store.author",
+        "fields":
+            {"name": "Kevin Brooks"}
+    },
+    {
+        "pk": 4,
+        "model": "store.author",
+        "fields":
+            {"name": "Stephen Brooks"}
+    },
+    {
+        "pk": 1,
+        "model": "store.book",
+        "fields":
+            {"publisher": "Avon", "isbn": "978-0380015399", "price": "7.19", "date_added": "2013-10-15", "subjects": [1, 3], "authors": [1, 4], "title": "The Complete Guide to C++", "user": ["test"]}
+    },
+    {
+        "pk": 2,
+        "model": "store.book",
+        "fields":
+            {"publisher": "Pilgrim Press", "isbn": "B00DGVFO4M", "price": "16.99", "date_added": "2013-10-16", "subjects": [2], "authors": [2], "title": "The Debutante's Fall", "user": ["test"]}
+    },
+    {
+        "pk": 3,
+        "model": "store.book",
+        "fields":
+            {"publisher": "Push", "isbn": "0439683289", "price": "6.95", "date_added": "2011-11-15", "subjects": [2], "authors": [3], "title": "Candy", "user": ["test"]}
+    }
+]
