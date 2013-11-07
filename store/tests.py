@@ -9,7 +9,6 @@ from store.urls import urlpatterns
 
 
 class WebPageTester(TestCase):
-
     def test_web_pages(self):
         argument_pages = ["author", "title", "isbn"]
         for url in urlpatterns:
