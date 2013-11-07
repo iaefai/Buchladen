@@ -64,7 +64,7 @@ def book_list(request):
     state = "Booklist page..."
     book_list = Book.objects.all()
     return render_to_response('store/book_list.html',
-                              {'state': state, 'book_list': book_list})
+                              {'state': state, 'book_list': book_list, 'title_banner': 'Book List'})
 
 def contact_seller(request):
     user = request.GET.get('id', 'NO_USER_SPECIFIED');
@@ -80,8 +80,8 @@ def isbn(request, isbn_number):
             books.append(book)
         elif "978"+target == book.isbn:
             books.append(book)
-    return render_to_response('store/search/isbn.html',
-                              {'state': state, 'book_list': books})
+    return render_to_response('store/book_list.html',
+                              {'state': state, 'book_list': books, 'title_banner': 'Isbn Results'})
 
 
 def author(request, author_name):
@@ -92,8 +92,8 @@ def author(request, author_name):
         for authors in book.authors.all():
             if target in authors.name.lower():
                 books.append(book)
-    return render_to_response('store/search/author.html',
-                              {'state': state, 'book_list': books})
+    return render_to_response('store/book_list.html',
+                              {'state': state, 'book_list': books, 'title_banner': 'Author Results'})
 
 
 def title(request, title_name):
@@ -103,6 +103,6 @@ def title(request, title_name):
     for book in Book.objects.all():
         if target in book.title.lower():
             books.append(book)
-    return render_to_response('store/search/title.html',
-                              {'state': state, 'book_list': books})        
+    return render_to_response('store/book_list.html',
+                              {'state': state, 'book_list': books, 'title_banner': 'Title Results'})
         

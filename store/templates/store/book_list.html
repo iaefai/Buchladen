@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <title>Book List</title>
+    <title>{{ title_banner }}</title>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="/css/bootstrap.css" />
     <link rel="stylesheet" href="{% static "store/layers.min.css" %}" />
@@ -31,7 +31,7 @@
 	<span class="isbn"> {{ book.isbn }} </span>
 
 	<span class="contact-seller">
-	  <a href="/contact-seller/{{ book.user }}" >Contact Seller</a>
+	  <a href="/contact-seller/?id={{ book.user.id }}" >Contact Seller</a>
 	</span>
 
 
