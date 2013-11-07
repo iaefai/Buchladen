@@ -71,5 +71,38 @@ def contact_seller(request):
     return render_to_response('store/contact_seller.html',
                               {'user': user});
         
-        
+def isbn(request, isbn_number):
+    state = "isbn result page"
+    books = []
+    target = isbn_number
+    for book in Book.objects.all():
+        if book.isbn == target:
+            books.append(book)
+        elif "978"+target == book.isbn:
+            books.append(book)
+    return render_to_response('store/search/isbn.html',
+                              {'state': state, 'book_list': books})
+
+
+def author(request, author_name):
+    state = "author result page"
+    books = []
+    target = author_name.lower()
+    for book in Book.objects.all():
+        for authors in book.authors.all():
+            if target in authors.name.lower():
+                books.append(book)
+    return render_to_response('store/search/author.html',
+                              {'state': state, 'book_list': books})
+
+
+def title(request, title_name):
+    state = "title result page"
+    books = []
+    target = title_name.lower()
+    for book in Book.objects.all():
+        if target in book.title.lower():
+            books.append(book)
+    return render_to_response('store/search/title.html',
+                              {'state': state, 'book_list': books})        
         

@@ -11,10 +11,14 @@ from store.urls import urlpatterns
 class WebPageTester(TestCase):
 
     def test_web_pages(self):
+        argument_pages = ["author", "title", "isbn"]
         for url in urlpatterns:
-            response = self.client.get(reverse("store.views."+url.name))
+            if url.name in argument_pages:
+                response = self.client.get(reverse("store.views."+url.name, args=['90']))
+            else:
+                response = self.client.get(reverse("store.views."+url.name))
             self.assertEqual(response.status_code, 200)
-
+    
 
 class BookTest(TestCase):
     fixtures = ['test_database.json']
