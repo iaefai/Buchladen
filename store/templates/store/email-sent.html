@@ -15,11 +15,10 @@
     </section>
 
     <section class="content">
-      <form action="/email-sent/?id={{ user }}&book={{ bookname }}" method="post">{% csrf_token %}
-	{{ form.as_p }}
-	<input type="submit" value="Submit" />
-      </form>
-      User being contacted: {{ user }}
+      User being contacted: {{ user }}</br>
+    Subject: {{ subject }}</br>
+    Message: {{ message }}
+    
     </section>
   </body>
 </html>

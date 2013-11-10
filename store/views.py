@@ -13,6 +13,10 @@ from store.models import Book
 
 from django import forms
 
+from django.core.mail import send_mail
+
+from django.contrib.auth.models import User
+
 class IndexView(generic.ListView):
     template_name = 'store/index.html'
     #context_object_name = 'latest_poll_list'
@@ -21,6 +25,13 @@ class IndexView(generic.ListView):
     #    """Return the last five published polls."""
     #    return Poll.objects.order_by('-pub_date')[:5]
         return []
+
+class ContactForm(forms.Form):
+    message = forms.CharField()
+    message.label = "Message"
+    reply_email = forms.EmailField()
+    reply_email.label = "Your Email"
+    reply_email.required = True
 
 class LoginForm(forms.Form):
     username = forms.EmailField()
@@ -68,8 +79,23 @@ def book_list(request):
 
 def contact_seller(request):
     user = request.GET.get('id', 'NO_USER_SPECIFIED');
+    bookname = request.GET.get('bookname', 'NO_BOOK_SPECIFIED');
+    form = ContactForm();
     return render_to_response('store/contact_seller.html',
-                              {'user': user});
+                              {'user': user, 'bookname':bookname, 'form': form},context_instance = RequestContext(request))
+
+def email_send(request):
+    this_id = request.GET.get('id', 'NO_USER_SPECIFIED');
+    bookname = request.GET.get('book', 'NO_BOOK_SPECIFIED');
+    reply_email = request.POST.get('reply_email','NO_REPLY_EMAIL');
+    message = request.POST.get('message','NO_MESSAGE');
+    user = User.objects.get(id=this_id);
+    email = user.email;
+    subject = 'Buchladen: Someone is interested in your book "'+bookname+'"!';
+    message = message+" TO REPLY TO THIS USER, USE THE PROVIDED EMAIL: "+reply_email;
+    #send_mail(subject, message, 'noreply@buchladen.uwinsocr.ca',[email], fail_silently=False);
+    return render_to_response('store/email-sent.html',
+                              {'user': this_id,'message': message, 'subject': subject},context_instance = RequestContext(request))
         
 def isbn(request, isbn_number):
     state = "isbn result page"
