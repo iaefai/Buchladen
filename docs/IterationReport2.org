@@ -1,0 +1,124 @@
+#+TITLE: Iteration Report 2 - Team 10
+#+AUTHOR: Matt Clifford, Jeff Drake, Jeremy High, Stephen Nusko, Matt Renaud
+
+#+LATEX_HEADER: \addtolength{\textheight}{1in}
+#+LATEX_HEADER: \addtolength{\voffset}{-0.5in}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \setlist{nolistsep}
+#+LATEX_HEADER: \renewcommand\tableofcontents{\vspace{-5em}}
+
+* Iteration Report 2
+** Milestones
+*** Update Tasks and Milestones to RedMine (Complete)
+- See https://redmine.cs.uwindsor.ca/projects/team10/issues for details.
+
+*** Familiarization with Python and Django (Complete)
+- Each group member continued exploring the Django framework.
+  
+*** Web App Prototype (Complete)
+- A application prototype has been deployed with ability to add,
+  remove, and edit books through the admin panel.
+- A book list is available for viewing.
+- The books can be searched by title, author, or ISBN.
+- The seller of the book can be contacted.
+
+*** Test Suite (Complete)
+- A set of unit tests to ensure that the website is functioning
+  properly and all pages return status 200.
+  
+** Deliverables
+*** Basic Website Styling and Formatting (Complete)
+- Located at https://github.com/iaefai/Buchladen/tree/master/store/static/store
+- The base CSS for the web application has been written.
+- Simplistic design to ease usability.
+  
+*** Admin Panel (Complete)
+- Admin panel fully working to add, remove and edit books.
+  
+*** Book Viewing (Complete)
+- Ability to view and search books for sale.
+
+*** Contacting Seller
+- The seller of the book can be contacted by email without exposing
+  their email address.
+  
+** Meetings This Iteration
+- Team meeting to discuss re-prioritization of tasks based on
+  feedback from professor at last iteration meeting.
+- Login and registration got pushed back to focus on core business
+  functionality (post, edit, delete books, contact seller, search for
+  books).
+
+** Planned Meetings for Next Iteration
+- Any decisions made about task to complete, milestones, design
+  decisions are located at
+  
+  https://github.com/iaefai/Buchladen/blob/master/docs/DesignOverview.org 
+  
+** Upcoming Milestones
+*** Full Registration and Login Functionality
+- Ability for new users to create an account and allow them to post
+  books for sale and manage books they have already posted.
+
+*** Design Docs
+- Write well formatted and esthetically pleasing design docs.
+  
+** Upcoming Deliverables
+- Fully functional registration page.
+- Fully functional login page.
+
+** Resource Usage
+- Resource usage has been as expected.
+  
+** Problems Encountered
+- Time constraints of group members have been difficult to work around.
+
+** Tasks For This Iteration For Each Member
+
+*** Clifford, Matt
+- Contact seller functionality.
+
+*** Drake, Jeffrey
+- Website styling.
+ 
+*** High, Jeremy
+- Sort books/search results by price.
+
+*** Nusko, Stephen
+- Unit test suite.
+- Search for books based on ISBN, title, or author.
+
+*** Renaud, Matt
+- Project management and report writing.
+- Booklist.
+
+  
+** Accomplishments This Iteration
+See Milestones and Deliverables
+
+** Tasks For Next Iterations
+- Complete login and logout functionality.
+- Design and implement registration form for new users.
+- Revise web application CSS if needed.
+- Design and implement user profile page.
+- Allow users to post books for sale.
+  
+** Work Distribution
+|--------------------+---------------+------------+-------------+---------------+-------------|
+|                    | Matt Clifford | Jeff Drake | Jeremy High | Stephen Nusko | Matt Renaud |
+|--------------------+---------------+------------+-------------+---------------+-------------|
+| Management         |            5% |         5% |          0% |            5% |         85% |
+| App Development    |           25% |        15% |         25% |           25% |         10% |
+| Docs               |            5% |        70% |          5% |            5% |         15% |
+| Quality Management |           10% |         5% |         10% |           70% |          5% |
+
+
+** References
+- Python Tutorial :: http://docs.python.org/3/tutorial/
+- Django Homepage :: https://www.djangoproject.com/
+- Unit Test :: https://docs.djangoproject.com/en/dev/topics/testing/
+- Source :: https://github.com/iaefai/Buchladen
+- RedMine :: https://redmine.cs.uwindsor.ca/projects/team10/
+     
+     
+

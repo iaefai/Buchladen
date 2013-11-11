@@ -4,11 +4,6 @@
     background-color: rgba(39, 25, 07, 0.7);
 }
 
-section.content {
-    width: 80%;
-    align: auto;
-}
-
 a, a:visited {
     color: rgba(255, 150, 150, 1);
     background-color: rgba(39, 25, 07, 0.7);

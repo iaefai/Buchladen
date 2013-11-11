@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load booklist %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,67 +14,30 @@
 {#        <link rel="stylesheet" href="/css/bootstrap.css">#}
         <link rel="stylesheet" href="{% static "store/layers.min.css" %}">
         <link rel="stylesheet" href="{% static "store/books.css" %}">
+        <link rel="stylesheet" href="{% static "store/booklist.css" %}" />
 
     </head>
     <body>
-        <section class="header">
+        <header>
             <h1>Buchladen</h1>
+        </header>
 
-{#            <ul>#}
-{#                <li>Login</li>#}
-{#                <li>Register</li>#}
-{#            </ul>#}
-        </section>
-
-        <section class="column three">
+        <section class="left column three">
             <div class="actionbox">
                 <div class="centre">Register</div>
             </div>
 
-            <div class="actionbox">
-                <div class="centre">Post</div>
-            </div>
-
+            <a href=""><div class="actionbox">
+                <div class="centre">Post Book</div>
+            </div></a>
 
         </section>
 
         <section class="column eight last">
-            <h1>CONTENT!!!</h1>
+            {% booklist %}
         </section>
 
         <section class="clear"></section>
-
-
-{#        <section>#}
-{#            <h1>Actions</h1>#}
-{#            <div class="contentbox" id="login">#}
-{#                <h1>Login</h1>#}
-{#                <form action="{% url 'store:index' %}" method="post">#}
-{#                    {%  csrf_token %}#}
-{#                    {{ form.as_p }}#}
-{#                    <label>e-mail</label><input type="text" name="input">#}
-{#                    <label>password</label><input type="password" name="password" value="">#}
-{##}
-{#                    <input type="submit" value="Login">#}
-{#                </form>#}
-{#            </div>#}
-{##}
-{#        </section>#}
-
-
-{#        <div class="container">#}
-
-{#      <form class="form-signin">#}
-{#        <h2 class="form-signin-heading">Please sign in</h2>#}
-{#        <input type="text" class="form-control" placeholder="Email address" autofocus>#}
-{#        <input type="password" class="form-control" placeholder="Password">#}
-{#        <label class="checkbox">#}
-{#          <input type="checkbox" value="remember-me"> Remember me#}
-{#        </label>#}
-{#        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>#}
-{#      </form>#}
-
-{#    </div> <!-- /container -->#}
 
     </body>
 </html>
