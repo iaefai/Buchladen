@@ -1,0 +1,41 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Search</title>
+		<link rel="stylesheet" href="/css/bootstrap.css" />
+		<link rel="stylesheet" href="{% static "store/layers.min.css" %}" />
+		<link rel="stylesheet" href="{% static "store/books.css" %}" />
+		<script language="javascript" type="text/javascript">
+			function redirect() {
+				var field = document.form.search_by[document.form.search_by.selectedIndex].value;
+				var search = document.form.find.value;
+
+				if (field === "Title") {
+					window.location.href="/search/title/"+search;
+				} else if (field === "ISBN") {
+					window.location.href="/search/isbn/"+search;
+				} else {
+					window.location.href="/search/author/"+search;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<section class="header">
+			<h1>Buchladen</h1>
+		</section>
+
+		<section class="content">
+		<form name="form" action="javascript:redirect()">{% csrf_token %}
+			<select id="id_search_by" name="search_by">
+				<option value="Title">Title</option>
+				<option value="ISBN">ISBN</option>
+				<option value="Author">Author</option>
+			</select>
+			<input type="text" id="id_find" name="find">
+			<p><input type="submit" value="Search" /></p>
+		</form>
+		</section>
+	</body>
+</html>

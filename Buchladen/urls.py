@@ -21,6 +21,7 @@ urlpatterns = patterns(
     url(r'^polls/', include('polls.urls', namespace='polls')),
     url(r'^booklist', 'store.views.book_list'),
     url(r'^contact-seller', 'store.views.contact_seller'),
+	url(r'^search/$', 'store.views.search'),
     url(r'^search/isbn/(?P<isbn_number>[^/]+)', 'store.views.isbn'),
     url(r'^search/author/(?P<author_name>[^/]+)', 'store.views.author'),
     url(r'^search/title/(?P<title_name>[^/]+)', 'store.views.title'),
