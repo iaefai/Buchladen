@@ -116,7 +116,7 @@ ROOT_URLCONF = 'Buchladen.urls'
 WSGI_APPLICATION = 'Buchladen.wsgi.application'
 
 import os
-TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates').replace('\\','/'),)
+TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), '..', 'templates', '/Users/drakej/Code/Python/Buchladen/store/templates/store').replace('\\','/'),)
 
 INSTALLED_APPS = (
     'django.contrib.auth',

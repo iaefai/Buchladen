@@ -19,16 +19,20 @@ body {
 .actionbox {
   display: block;
   background-color: rgba(10, 10, 255, 0.4);
-  margin: 0.5em;
+  margin-bottom: 1em;
   height: 3em;
-  text-align: center; }
-  .actionbox .centre {
-    font: bold 16pt/2em sans-serif; }
+  text-align: center;
+}
+
+.actionbox .centre {
+    font: bold 16pt/2em sans-serif;
+}
 
 .actionbox:hover {
-  background-color: rgba(10, 10, 255, 0.6); }
+  background-color: rgba(10, 10, 255, 0.6);
+}
 
-.header {
+header {
   display: block;
   margin-left: 0px;
   padding-left: 4em;
@@ -64,9 +68,14 @@ body {
 #login:hover {
   background-color: rgba(10, 10, 255, 0.6); }
 
+.left {
+    padding-left: 4em;
+}
+
 section {
   color: white;
-  padding-left: 4em; }
+/*  padding-left: 4em; */
+}
   section h1 {
     font-size: 24pt;
     padding-left: 10px; }

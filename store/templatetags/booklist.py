@@ -1,9 +1,9 @@
 
 from django import template
+from store.models import Book
 
 register = template.Library()
 
-print("Registering booklist tag\n")
 
 @register.inclusion_tag('store/booklist.html')
 def booklist():

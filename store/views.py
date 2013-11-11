@@ -8,8 +8,8 @@ from django.views import generic
 from django.contrib.auth import authenticate, login
 from django.shortcuts import render_to_response
 
-from store.models import Book
 
+from store.models import Book
 from django.core.mail import send_mail
 
 from store.forms import ContactForm, LoginForm
