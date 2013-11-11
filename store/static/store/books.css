@@ -16,6 +16,10 @@ body {
   .contentbox h2 {
     font-size: 10pt; }
 
+h1 a {
+    color: white;
+    text-decoration: none;
+}
 /* corrects our a */
 a.actionbox, a.actionbox:visited {
     color: white;

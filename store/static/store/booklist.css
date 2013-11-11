@@ -4,7 +4,7 @@
     background-color: rgba(39, 25, 07, 0.7);
 }
 
-a, a:visited {
+a.contact, a.contact:visited {
     color: rgba(255, 150, 150, 1);
     background-color: rgba(39, 25, 07, 0.7);
     padding: 6px 10px 10px 6px;

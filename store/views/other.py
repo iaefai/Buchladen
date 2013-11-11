@@ -80,27 +80,29 @@ def email_send(request):
         
 def isbn(request, isbn_number):
     state = "isbn result page"
-    books = []
-    target = isbn_number
-    for book in Book.objects.all():
-        if book.isbn == target:
-            books.append(book)
-        elif "978"+target == book.isbn:
-            books.append(book)
+    #books = []
+    #target = isbn_number
+
+    books = Book.objects.filter(isbn__icontains = isbn_number).order_by('title')
+
+    #for book in Book.objects.all():
+    #    if book.isbn == target:
+    #        books.append(book)
+    #    elif "978"+target == book.isbn:
+    #        books.append(book)
     return render_to_response('store/book_list.html',
                               {'state': state, 'book_list': books, 'title_banner': 'Isbn Results'})
 
 
 def author(request, author_name):
     state = "author result page"
+
     author = Author.objects.filter(name__icontains = author_name)
     books = Book.objects.filter( authors__in = author).order_by('title')
 
+    books = list(Book.objects.filter( authors = author))
+    sort(books, author_name.lower(), "title")
 
-    #for book in Book.objects.all():
-    #    for authors in book.authors.all():
-    #        if target in authors.name.lower():
-    #            books.append(book)
     return render_to_response('store/book_list.html',
                               {'state': state, 'book_list': books, 'title_banner': 'Author Results'})
 
@@ -108,13 +110,42 @@ def author(request, author_name):
 def title(request, title_name):
     state = "title result page"
     target = title_name.lower()
-    books = Book.objects.filter(title__in = target)
 
+    books = list(Book.objects.filter(title__icontains = target))
+    sort(books, target, "title")
 
-    for book in Book.objects.all():
-        if target in book.title.lower():
-            books.append(book)
     return render_to_response('store/book_list.html',
                               {'state': state, 'book_list': books, 'title_banner': 'Title Results'})
 
+def sort(books, target, field):
+    temp = []
+    if field == "title":
+        for book in books:
+            if target == book.title.lower():
+                temp.append(book)
+                books.remove(book)
 
+        for i in range(0, len(books)):
+            for j in range(i+1, len(books)):
+                if books[i].title > books[j].title:
+                    books[i], books[j] = books[j], books[i]
+
+    else:
+        for book in books:
+            for author in book.authors.all():
+                if target == author.name.lower():
+                    temp.append(book)
+                    books.remove(book)
+
+        for i in range(0, len(books)):
+            for j in range(i+1, len(books)):
+                if books[i].authors[0] > books[j].authors[0]:
+                    books[i], books[j] = books[j], books[i]
+
+    if temp:
+        for i in range(0, len(temp)):
+            for j in range(i+1, len(temp)):
+                if temp[i].title > temp[j].title:
+                    temp[i], temp[j] = temp[j], temp[i]
+        for i in range(0, len(temp)):
+            books.insert(0, temp[i])
