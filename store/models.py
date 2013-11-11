@@ -27,6 +27,19 @@ class Book(models.Model):
     price = models.DecimalField(max_digits=5, decimal_places=2)
     date_added = models.DateField()
     user = models.ForeignKey(User)
+
+    # for admin:
+    def author_names(self):
+        return ', '.join([a.name for a in self.authors.all()])
+    author_names.short_description = "Author Names"
+
+    def subject_list(self):
+        return ', '.join([a.subject for a in self.subjects.all()])
+    subject_list.short_description = "Subjects"
+
+    def __str__(self):
+        return self.title
+
     #description = models.TextField()
 
     #def default(self):

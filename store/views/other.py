@@ -93,9 +93,8 @@ def isbn(request, isbn_number):
 
 def author(request, author_name):
     state = "author result page"
-    target = author_name.lower()
-    author = Author.objects.filter(name = author_name)
-    books = Book.objects.filter( authors = author)
+    author = Author.objects.filter(name__icontains = author_name)
+    books = Book.objects.filter( authors__in = author).order_by('title')
 
 
     #for book in Book.objects.all():
@@ -108,8 +107,10 @@ def author(request, author_name):
 
 def title(request, title_name):
     state = "title result page"
-    books = []
     target = title_name.lower()
+    books = Book.objects.filter(title__in = target)
+
+
     for book in Book.objects.all():
         if target in book.title.lower():
             books.append(book)
