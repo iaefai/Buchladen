@@ -113,4 +113,33 @@ def title(request, title_name):
     return render_to_response('store/book_list.html',
                               {'state': state, 'book_list': books, 'title_banner': 'Title Results'})
 
+def sort(books, target, field):
+    temp = []
+    if field == "title":
+        for book in books:
+            if target == book.title.lower():
+                temp.append(book)
+                books.remove(book)
+
+        for i in range(0, len(books)):
+            for j in range(i+1, len(books)):
+                if books[i].title > books[j].title:
+                    books[i], books[j] = books[j], books[i]
+
+    else:
+        for book in books:
+            for author in book.authors.all():
+                if target == author.name.lower():
+                    temp.append(book)
+                    books.remove(book)
+
+        for i in range(0, len(books)):
+            for j in range(i+1, len(books)):
+                if books[i].authors[0] > books[j].authors[0]:
+                    books[i], books[j] = books[j], books[i]
+
+    if not temp:
+        sort(temp, "", "title")
+        for element in reverse(temp):
+            books.insert(0, element)
 
