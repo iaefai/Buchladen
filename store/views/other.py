@@ -96,9 +96,9 @@ def author(request, author_name):
     books = Book.objects.all()
     target = author_name.lower()
     #for book in Book.objects.all():
-    #    for authors in book.authors.all():
-    #        if target in authors.name.lower():
-    #            books.append(book)
+     #   for authors in book.authors.all():
+      #      if target in authors.name.lower():
+       #         books.append(book)
     return render_to_response('store/book_list.html',
                               {'state': state, 'book_list': books, 'title_banner': 'Author Results'})
 
