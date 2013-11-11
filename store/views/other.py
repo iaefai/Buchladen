@@ -95,8 +95,8 @@ def author(request, author_name):
     state = "author result page"
     target = author_name.lower()
     author = Author.objects.filter(name = author_name)
-    books = Book.objects.filter( authors = author)
-
+    books = list(Book.objects.filter( authors = author))
+    sort(books, target, "title")
 
     #for book in Book.objects.all():
      #   for authors in book.authors.all():
@@ -108,11 +108,13 @@ def author(request, author_name):
 
 def title(request, title_name):
     state = "title result page"
-    books = []
     target = title_name.lower()
-    for book in Book.objects.all():
-        if target in book.title.lower():
-            books.append(book)
+    books = list(Book.objects.filter(title__icontains = target))
+	
+    #for book in Book.objects.all():
+    #    if target in book.title.lower():
+    #        books.append(book)
+    sort(books, target, "title")
     return render_to_response('store/book_list.html',
                               {'state': state, 'book_list': books, 'title_banner': 'Title Results'})
 
@@ -141,8 +143,10 @@ def sort(books, target, field):
                 if books[i].authors[0] > books[j].authors[0]:
                     books[i], books[j] = books[j], books[i]
 
-    if not temp:
-        sort(temp, "", "title")
-        for element in reverse(temp):
-            books.insert(0, element)
-
+    if temp:
+        for i in range(0, len(temp)):
+            for j in range(i+1, len(temp)):
+                if temp[i].title > temp[j].title:
+                    temp[i], temp[j] = temp[j], temp[i]
+        for i in range(0, len(temp)):
+            books.insert(0, temp[i])
