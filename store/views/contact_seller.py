@@ -19,13 +19,13 @@ def contact_seller(request):
 #    def get(self, request, *args, **kwargs):
 #
 
-from django.views.generic.edit import FormView
-
-class ContactView(FormView):
-    template_name = "contact.html"
-    form_class = ContactForm
-    success_url = "/email-sent/"
-
-    def form_valid(self, form):
-        form.send_email()
-        return super(ContactView, self).form_valid(form)
+#from django.views.generic.edit import FormView
+#
+#class ContactView(FormView):
+#    template_name = "contact.html"
+#    form_class = ContactForm(initial={ 'email': request
+#    success_url = "/email-sent/"
+#
+#    def form_valid(self, form):
+#        form.send_email()
+#        return super(ContactView, self).form_valid(form)

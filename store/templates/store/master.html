@@ -1,0 +1,47 @@
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Buchladen</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+{#        <link rel="stylesheet" href="/css/bootstrap.css">#}
+        <link rel="stylesheet" href="{% static "store/layers.min.css" %}">
+        <link rel="stylesheet" href="{% static "store/books.css" %}">
+        <link rel="stylesheet" href="{% static "store/booklist.css" %}" />
+
+    </head>
+    <body>
+        <header>
+            <h1>Buchladen</h1>
+        </header>
+
+        <section class="left column three">
+            <div class="actionbox">
+                <div class="centre">Register</div>
+            </div>
+
+            <a href="" class="actionbox">
+                <div class="centre">Post Book</div>
+            </a>
+
+            <a href="/search" class="actionbox">
+                <div class="centre">Search</div>
+            </a>
+
+        </section>
+
+        <section class="column eight last">
+            {% block content %} {% endblock %}
+        </section>
+
+        <section class="clear"></section>
+
+    </body>
+</html>
