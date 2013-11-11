@@ -26,16 +26,6 @@ class IndexView(generic.ListView):
     #    return Poll.objects.order_by('-pub_date')[:5]
         return []
 
-
-
-#class SearchForm(forms.Form):
-#	search_by = forms.ChoiceField()
-#	search_by.label = "Search by"
-#	search_by.required = True
-#	search_for = forms.CharField()
-#	search_for.label = "Search for"
-#	search_for.required = True
-
 def index(request):
     if request.method == 'POST':
         form = LoginForm(request.POST)
@@ -83,11 +73,9 @@ def contact_seller(request):
 
 def search(request):
 	state = "Search page"
-#	form = SearchForm();
 	return render_to_response('store/search.html',
 							  {'state': state}, context_instance = RequestContext(request))
 	
-
 def email_send(request):
     this_id = request.GET.get('id', 'NO_USER_SPECIFIED');
     bookname = request.GET.get('book', 'NO_BOOK_SPECIFIED');
