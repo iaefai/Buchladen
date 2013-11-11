@@ -1,24 +1,10 @@
+{% extends "store/master.html" %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <title>Contact Seller</title>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="/css/bootstrap.css" />
-    <link rel="stylesheet" href="{% static "store/layers.min.css" %}" />
-    <link rel="stylesheet" href="{% static "store/books.css" %}" />
-    <link rel="stylesheet" href="{% static "store/booklist.css" %}" />
-  </head>
-  <body>
-    <section class="header">
-      <h1>Buchladen</h1>
-    </section>
 
-    <section class="content">
-      User being contacted: {{ user }}</br>
+{% block content %}
+
+    User being contacted: {{ user }}</br>
     Subject: {{ subject }}</br>
     Message: {{ message }}
     
-    </section>
-  </body>
-</html>
+{% endblock %}

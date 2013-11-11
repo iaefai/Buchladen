@@ -1,20 +1,7 @@
+{% extends "store/master.html" %}
 {% load staticfiles %}
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-  <head>
-    <title>{{ title_banner }}</title>
-    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="/css/bootstrap.css" />
-    <link rel="stylesheet" href="{% static "store/layers.min.css" %}" />
-    <link rel="stylesheet" href="{% static "store/books.css" %}" />
-    <link rel="stylesheet" href="{% static "store/booklist.css" %}" />
-  </head>
-  <body>
-    <section class="header">
-      <h1>Buchladen</h1>
-    </section>
 
-    <section class="content">
+{% block content %}
       {% for book in book_list %}
       <div class="book-list-entry">
 	<span class="title"> {{ book.title }} </span>
@@ -52,6 +39,4 @@
 
       </div>
       {% endfor %}
-    </section>
-  </body>
-</html>
+    {% endblock %}
