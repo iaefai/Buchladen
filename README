@@ -12,5 +12,7 @@ Group members:
 
 This project is being setup primarily with PyCharm from JetBrains, but can be used alone. A Python virtual environment with Python 3.3.2 and Django 1.5.4 is being assumed.
 
+To run: ./manage.py run_gunicorn --settings=Buchladen.settings_production -b 127.0.0.1:10103
+
 
 
