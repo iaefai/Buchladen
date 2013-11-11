@@ -19,7 +19,6 @@ from django.contrib.auth.models import User
 
 
 
-
 #class SearchForm(forms.Form):
 #	search_by = forms.ChoiceField()
 #	search_by.label = "Search by"
