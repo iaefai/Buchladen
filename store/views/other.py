@@ -9,7 +9,7 @@ from django.contrib.auth import authenticate, login
 from django.shortcuts import render_to_response
 
 
-from store.models import Book
+from store.models import Book, Author
 from django.core.mail import send_mail
 
 from store.forms import ContactForm, LoginForm
@@ -93,8 +93,11 @@ def isbn(request, isbn_number):
 
 def author(request, author_name):
     state = "author result page"
-    books = Book.objects.all()
     target = author_name.lower()
+    author = Author.objects.filter(name = author_name)
+    books = Book.objects.filter( authors = author)
+
+
     #for book in Book.objects.all():
      #   for authors in book.authors.all():
       #      if target in authors.name.lower():
