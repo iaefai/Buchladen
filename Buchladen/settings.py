@@ -130,7 +130,6 @@ INSTALLED_APPS = (
     #'pipeline',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'polls',
     'store',
     'gunicorn',
 #    'rest_framework',

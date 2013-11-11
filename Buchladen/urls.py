@@ -18,7 +18,6 @@ urlpatterns = patterns(
     url(r'^$', include('store.urls', namespace='store')),
     url(r'^index', 'store.views.index'),
     url(r'^login', 'store.views.login_user'),
-    url(r'^polls/', include('polls.urls', namespace='polls')),
     url(r'^booklist', 'store.views.book_list'),
     url(r'^contact-seller', 'store.views.contact_seller'),
     url(r'^search/isbn/(?P<isbn_number>[^/]+)', 'store.views.isbn'),

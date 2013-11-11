@@ -1,6 +1,5 @@
 from django.http import HttpResponseRedirect, HttpResponse
 from django.template import RequestContext, loader
-from polls.models import Poll, Choice
 from django.core.urlresolvers import reverse
 from django.http import Http404
 from django.shortcuts import render, get_object_or_404
@@ -11,9 +10,10 @@ from django.shortcuts import render_to_response
 
 from store.models import Book
 
-from django import forms
-
 from django.core.mail import send_mail
+
+from store.forms import ContactForm, LoginForm
+#from store.tags import *
 
 from django.contrib.auth.models import User
 
@@ -26,18 +26,7 @@ class IndexView(generic.ListView):
     #    return Poll.objects.order_by('-pub_date')[:5]
         return []
 
-class ContactForm(forms.Form):
-    message = forms.CharField()
-    message.label = "Message"
-    reply_email = forms.EmailField()
-    reply_email.label = "Your Email"
-    reply_email.required = True
 
-class LoginForm(forms.Form):
-    username = forms.EmailField()
-    username.label = "e-mail"
-    username.required = True
-    password = forms.PasswordInput()
 
 def index(request):
     if request.method == 'POST':
@@ -80,7 +69,7 @@ def book_list(request):
 def contact_seller(request):
     user = request.GET.get('id', 'NO_USER_SPECIFIED');
     bookname = request.GET.get('bookname', 'NO_BOOK_SPECIFIED');
-    form = ContactForm();
+    form = contact_form();
     return render_to_response('store/contact_seller.html',
                               {'user': user, 'bookname':bookname, 'form': form},context_instance = RequestContext(request))
 
