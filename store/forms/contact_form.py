@@ -1,8 +1,14 @@
 from django import forms
 
 class ContactForm(forms.Form):
-    message = forms.CharField()
+    name = forms.CharField()
+    name.label = "From"
+    email = forms.EmailField()
+    email.label = "From Email"
+    email.required = True
+    message = forms.CharField(widget=forms.Textarea)
     message.label = "Message"
-    reply_email = forms.EmailField()
-    reply_email.label = "Your Email"
-    reply_email.required = True
+
+    def send_email(self):
+        # send email using the self.cleaned_data dictionary
+        pass

@@ -16,6 +16,15 @@ body {
   .contentbox h2 {
     font-size: 10pt; }
 
+/* corrects our a */
+a.actionbox, a.actionbox:visited {
+    color: white;
+    background-color: rgba(10, 10, 255, 0.4);
+    padding: 0;
+    text-decoration: none;
+    margin-right: 0;
+}
+
 .actionbox {
   display: block;
   background-color: rgba(10, 10, 255, 0.4);

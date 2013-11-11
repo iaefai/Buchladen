@@ -17,14 +17,6 @@ from store.forms import ContactForm, LoginForm
 
 from django.contrib.auth.models import User
 
-class IndexView(generic.ListView):
-    template_name = 'store/index.html'
-    #context_object_name = 'latest_poll_list'
-
-    def get_queryset(self):
-    #    """Return the last five published polls."""
-    #    return Poll.objects.order_by('-pub_date')[:5]
-        return []
 
 
 
@@ -36,15 +28,15 @@ class IndexView(generic.ListView):
 #	search_for.label = "Search for"
 #	search_for.required = True
 
-def index(request):
-    if request.method == 'POST':
-        form = LoginForm(request.POST)
-        if form.is_valid():
-            return HttpResponseRedirect('/ok')
-    else:
-        form = LoginForm()
-
-    return render(request, 'store/index.html', { 'form': form })
+#def index(request):
+#    if request.method == 'POST':
+#        form = LoginForm(request.POST)
+#        if form.is_valid():
+#            return HttpResponseRedirect('/ok')
+#    else:
+#        form = LoginForm()
+#
+#    return render(request, 'store/index.html', { 'form': form })
 
 def login_user(request):
     state = "Please login below..."
@@ -67,36 +59,22 @@ def login_user(request):
                               {'state': state, 'username': username},
                               context_instance = RequestContext(request))
 
-
-def book_list(request):
-    state = "Booklist page..."
-    book_list = Book.objects.all()
-    return render_to_response('store/book_list.html',
-                              {'state': state, 'book_list': book_list, 'title_banner': 'Book List'})
-
-def contact_seller(request):
-    user = request.GET.get('id', 'NO_USER_SPECIFIED');
-    bookname = request.GET.get('bookname', 'NO_BOOK_SPECIFIED');
-    form = contact_form();
-    return render_to_response('store/contact_seller.html',
-                              {'user': user, 'bookname':bookname, 'form': form},context_instance = RequestContext(request))
-
 def search(request):
-	state = "Search page"
+    state = "Search page"
 #	form = SearchForm();
-	return render_to_response('store/search.html',
-							  {'state': state}, context_instance = RequestContext(request))
-	
+    return render_to_response('store/search.html',
+                              {'state': state}, context_instance = RequestContext(request))
+
 
 def email_send(request):
-    this_id = request.GET.get('id', 'NO_USER_SPECIFIED');
-    bookname = request.GET.get('book', 'NO_BOOK_SPECIFIED');
-    reply_email = request.POST.get('reply_email','NO_REPLY_EMAIL');
-    message = request.POST.get('message','NO_MESSAGE');
-    user = User.objects.get(id=this_id);
-    email = user.email;
-    subject = 'Buchladen: Someone is interested in your book "'+bookname+'"!';
-    message = message+" TO REPLY TO THIS USER, USE THE PROVIDED EMAIL: "+reply_email;
+    this_id = request.GET.get('id', 'NO_USER_SPECIFIED')
+    bookname = request.GET.get('book', 'NO_BOOK_SPECIFIED')
+    reply_email = request.POST.get('reply_email','NO_REPLY_EMAIL')
+    message = request.POST.get('message','NO_MESSAGE')
+    user = User.objects.get(id=this_id)
+    email = user.email
+    subject = 'Buchladen: Someone is interested in your book "'+bookname+'"!'
+    message = message+" TO REPLY TO THIS USER, USE THE PROVIDED EMAIL: "+reply_email
     #send_mail(subject, message, 'noreply@buchladen.uwinsocr.ca',[email], fail_silently=False);
     return render_to_response('store/email-sent.html',
                               {'user': this_id,'message': message, 'subject': subject},context_instance = RequestContext(request))
@@ -135,4 +113,5 @@ def title(request, title_name):
             books.append(book)
     return render_to_response('store/book_list.html',
                               {'state': state, 'book_list': books, 'title_banner': 'Title Results'})
-        
+
+

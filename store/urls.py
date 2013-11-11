@@ -4,12 +4,10 @@ from store import views
 
 urlpatterns = patterns(
     '',
-    # ex: /polls/
-    #url(r'^$', views.IndexView.as_view(), name='index'),
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.IndexView.as_view(), name='index'),
     url(r'^/login$', views.login_user, name='login_user'),
-    url(r'^/booklist$', views.book_list, name='book_list'),
     url(r'^/contact-seller$', views.contact_seller, name='contact_seller'),
+    url(r'^/contact$', views.ContactView.as_view(), name='contact'),
 	url(r'^/search/$', views.search, name='search'),
     url(r'^/search/isbn/(?P<isbn_number>[^/]+)$', views.isbn, name='isbn'),
     url(r'^/search/author/(?P<author_name>[^/]+)', views.author, name='author'),
