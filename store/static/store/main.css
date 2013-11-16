@@ -1,0 +1,198 @@
+/*@import url(http://fonts.googleapis.com/css?family=Sonsie+One); */
+@import url(http://fonts.googleapis.com/css?family=Henny+Penny);
+
+body {
+    margin: 0;
+
+    background: #527ea8;
+}
+
+/* search */
+.underline-search {
+    width: calc(100% - 40rem);
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid black;
+    font-size: 24pt;
+    margin-left: 1em;
+}
+
+.underline-search:focus {
+    outline: none;
+}
+
+/* buttons */
+
+.button {
+    width: 10rem;
+    font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    margin: 15px 0px 0px 15px;
+    font-size: 18px;
+    text-transform: uppercase;
+    background: #ED5E2F;
+    color: #FFF;
+    border: 0px none;
+    outline: 0px none;
+}
+
+.button:hover {
+    background: #74A599;
+}
+
+.button:active {
+    background: #F6A953;
+}
+
+.contentbox {
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+.contentbox h1 {
+    display: inline-block;
+    font-size: 14pt;
+}
+
+.contentbox h2 {
+    font-size: 10pt;
+}
+
+h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+/* corrects our a */
+a.actionbox, a.actionbox:visited {
+    color: white;
+    background-color: rgba(10, 10, 255, 0.4);
+    padding: 0;
+    text-decoration: none;
+    margin-right: 0;
+}
+
+.actionbox {
+  display: block;
+  background-color: rgba(10, 10, 255, 0.4);
+  margin-bottom: 1em;
+  height: 3em;
+  text-align: center;
+}
+
+.actionbox .centre {
+    font: bold 16pt/2em sans-serif;
+}
+
+.actionbox:hover {
+  background-color: rgba(10, 10, 255, 0.6);
+}
+
+header {
+  display: block;
+  margin-left: 0px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: calc(100% - 2rem);
+  margin-bottom: 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+}
+
+header h1 {
+    display: inline-block;
+    text-align: right;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'Henny Penny', cursive;
+    font-size: 3em;
+    width: 14rem;
+}
+
+header ul {
+    font-size: 12pt;
+    display: inline;
+    font-variant: smallcaps;
+    list-style-type: none;
+    float: right;
+    text-align: right;
+}
+
+header ul li {
+    display: inline;
+}
+
+#login {
+  width: 10em;
+  height: auto;
+  background-color: rgba(10, 10, 255, 0.4);
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+#login:hover {
+    background-color: rgba(10, 10, 255, 0.6);
+}
+
+.left {
+    padding-left: 4em;
+}
+
+section {
+    color: white;
+/*  padding-left: 4em; */
+}
+
+section h1 {
+    font-size: 24pt;
+    padding-left: 10px;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+
+.form-signin .checkbox {
+  font-weight: normal;
+}
+
+.form-signin .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}

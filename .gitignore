@@ -2,4 +2,9 @@ python
 */__pycache__
 .idea/
 *.pyc
+*.aux
+*.log
+*.synctex.gz
+whoosh_index/*
+
 

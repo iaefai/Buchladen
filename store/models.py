@@ -16,7 +16,7 @@ class Author(models.Model):
 
 
 class Book(models.Model):
-    title = models.CharField(max_length=30)
+    title = models.CharField(max_length=70)
     #edition = models.CharField(max_length=10)
     authors = models.ManyToManyField(Author)
     #condition = models.CharField(max_length=20)   ## perhaps we need a choice

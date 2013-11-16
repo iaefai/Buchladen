@@ -1,6 +1,4 @@
 {% load staticfiles %}
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -9,18 +7,35 @@
         <title>Buchladen</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="http://fonts.googleapis.com/css?family=Headland+One%7COpen+Sans:400,300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"></link>
+
+        <!--<link rel="stylesheet" href="{% static "css/zimit.min.css" %}">-->
+
+        <script src="{% static "js/jquery-2.0.3.min.js" %}" defer="defer"></script>
+        <!--<script src="{% static "js/bootstrap.min.js" %}" defer="defer"></script>-->
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-{#        <link rel="stylesheet" href="/css/bootstrap.css">#}
-        <link rel="stylesheet" href="{% static "store/layers.min.css" %}">
-        <link rel="stylesheet" href="{% static "store/books.css" %}">
+
+        <!--<link rel="stylesheet" href="{% static "store/layers.min.css" %}">-->
+        <link rel="stylesheet" href="{% static "store/main.css" %}">
         <link rel="stylesheet" href="{% static "store/booklist.css" %}" />
+        <script src="{% static "store/buchladen.js" %}" defer="defer"> </script>
 
     </head>
     <body>
         <header>
             <h1><a href="/">Buchladen</a></h1>
+
+
+            <input type="text" class="underline-search" id="searchbox" placeholder="Search">
+
+            <input type="button" class="button" value="Post">
+            <input type="button" class="button" value="Register">
         </header>
+
+        <span id="status">
+               Not selected
+        </span>
 
         <section class="left column three">
             <!--<div class="actionbox">-->
@@ -36,6 +51,7 @@
             </a>
 
         </section>
+
 
         <section class="column eight last">
             {% block content %} {% endblock %}
