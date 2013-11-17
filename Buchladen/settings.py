@@ -132,6 +132,7 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
     'store',
     'gunicorn',
+    'jsonview',
 #    'rest_framework',
 )
 

@@ -16,8 +16,10 @@ from store.forms import ContactForm, LoginForm
 #from store.tags import *
 
 from django.contrib.auth.models import User
+from jsonview.decorators import json_view
 
-
+from store.search import *
+from store.serializer import *
 
 #class SearchForm(forms.Form):
 #	search_by = forms.ChoiceField()
@@ -149,3 +151,9 @@ def sort(books, target, field):
                     temp[i], temp[j] = temp[j], temp[i]
         for i in range(0, len(temp)):
             books.insert(0, temp[i])
+
+@json_view
+def search_view(request, search_terms):
+    results = list(Search(SearchTerms(search_terms)).results())
+    book_serial = BookSerializer()
+    return book_serial.list_deflate(results)

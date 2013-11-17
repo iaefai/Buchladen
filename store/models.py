@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 
-
 class Subject(models.Model):
     subject = models.CharField(max_length=20)
 
@@ -55,4 +54,5 @@ class Book(models.Model):
     #    dict['date_added'] = self.date_added
     #    dict['user'] = self.user.username
     #    dict['authors'] =
+
 
