@@ -16,3 +16,4 @@ To run: ./manage.py run_gunicorn --settings=Buchladen.settings_production -b 127
 
 
 
+Need nap: pip install git+https://github.com/funkybob/django-nap.git
