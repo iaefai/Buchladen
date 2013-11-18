@@ -22,6 +22,14 @@ $(document).ready(function(e) {
                 success: function(data, textStatus, jqXHR) {
                     console.log("Received request: " + textStatus);
                     console.log(data);
+
+                    var d = { books: data };
+                    console.log(d);
+                    var template = $('#search_template').html();
+                    var output = Mustache.render(template, d);
+                    console.log(output);
+                    $('#main_content').html(output);
+
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     console.log("Error received: " + textStatus);

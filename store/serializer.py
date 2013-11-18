@@ -12,9 +12,14 @@ class AuthorSerializer(models.ModelSerialiser):
         model = Author
 
 class BookSerializer(models.ModelSerialiser):
+    authors  = models.ModelManySerialiserField('authors.all', model=Author)
+    subjects = models.ModelManySerialiserField('subjects.all', model=Subject)
+    user = models.ModelSerialiserField(model=User)
     class Meta:
         model = Book
 
 class UserSerializer(models.ModelSerialiser):
     class Meta:
         model = User
+
+# pip install git+https://github.com/funkybob/django-nap.git

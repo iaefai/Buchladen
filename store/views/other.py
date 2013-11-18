@@ -154,6 +154,8 @@ def sort(books, target, field):
 
 @json_view
 def search_view(request, search_terms):
+    print("Searching for: %s" % search_terms)
     results = list(Search(SearchTerms(search_terms)).results())
+    print("Returned " + str(results))
     book_serial = BookSerializer()
     return book_serial.list_deflate(results)

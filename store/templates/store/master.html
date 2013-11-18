@@ -12,6 +12,7 @@
         <!--<link rel="stylesheet" href="{% static "css/zimit.min.css" %}">-->
 
         <script src="{% static "js/jquery-2.0.3.min.js" %}" defer="defer"></script>
+        <script src="{% static "js/jquery.mustache.js" %}" defer="defer"></script>
         <!--<script src="{% static "js/bootstrap.min.js" %}" defer="defer"></script>-->
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -20,6 +21,16 @@
         <link rel="stylesheet" href="{% static "store/main.css" %}">
         <link rel="stylesheet" href="{% static "store/booklist.css" %}" />
         <script src="{% static "store/buchladen.js" %}" defer="defer"> </script>
+        <script id="search_template" type="text/html">
+           {% verbatim %}
+            {{^books}}
+                <h1>No books matching criteria.</h1>
+            {{/books}}
+            {{#books}}
+                <h1>{{title}}</h1>
+            {{/books}}
+           {% endverbatim %}
+        </script>
 
     </head>
     <body>
@@ -27,7 +38,7 @@
             <h1><a href="/">Buchladen</a></h1>
 
 
-            <input type="text" class="underline-search" id="searchbox" placeholder="Search">
+            <input type="text" class="underline-search" id="searchbox" placeholder="Search" autocomplete="off">
 
             <input type="button" class="button" value="Post">
             <input type="button" class="button" value="Register">
@@ -37,23 +48,23 @@
                Not selected
         </span>
 
-        <section class="left column three">
-            <!--<div class="actionbox">-->
-                <!--<div class="centre">Register</div>-->
-            <!--</div>-->
+        <!--<section class="left column three">-->
+            <!--&lt;!&ndash;<div class="actionbox">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="centre">Register</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
 
-            <!--<a href="" class="actionbox">-->
-                <!--<div class="centre">Post Book</div>-->
+            <!--&lt;!&ndash;<a href="" class="actionbox">&ndash;&gt;-->
+                <!--&lt;!&ndash;<div class="centre">Post Book</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;</a>&ndash;&gt;-->
+
+            <!--<a href="/search" class="actionbox">-->
+                <!--<div class="centre">Search</div>-->
             <!--</a>-->
 
-            <a href="/search" class="actionbox">
-                <div class="centre">Search</div>
-            </a>
-
-        </section>
+        <!--</section>-->
 
 
-        <section class="column eight last">
+        <section class="column eight last" id="main_content">
             {% block content %} {% endblock %}
         </section>
 

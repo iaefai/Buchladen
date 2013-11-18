@@ -12,32 +12,39 @@ class Search:
 
         for title in self.terms.titles:
             booklist = Book.objects.filter(title__icontains = title)
+            print("title keyword %d" % booklist.count())
             res &= booklist
 
         for author in self.terms.authors:
             authors = Author.objects.filter(name__icontains = author)
             booklist = Book.objects.filter(authors__in = authors)
+            print("author keyword %d " % booklist.count())
             res &= booklist
 
         for subject in self.terms.subjects:
             subjects = Subject.objects.filter(subject__icontains = subject)
             booklist = Book.objects.filter(subjects__in = subjects)
+            print("subjects keyword %d " % booklist.count())
             res &= booklist
 
         for num in self.terms.isbn:
             booklist = Book.objects.filter(isbn__icontains = num)
+            print("isbn keyword: %d" % booklist.count())
             res &= booklist
 
         for word in self.terms.keywords:
             booklist = Book.objects.filter(isbn__icontains = word)
-
+            print(" isbn: %d" % booklist.count())
             booklist |= Book.objects.filter(title__icontains = word)
-
+            print(" title: %d" % booklist.count())
             subjects = Subject.objects.filter(subject__icontains = word)
             booklist |= Book.objects.filter(subjects__in = subjects)
+            print(" subjects: %d" % booklist.count())
 
             authors = Author.objects.filter(name__icontains = word)
+
             booklist |= Book.objects.filter(authors__in = authors)
+            print(" authors: %d" % booklist.count())
 
             res &= booklist
         #if self.terms.titles is not []:
@@ -68,7 +75,6 @@ class SearchTerms:
 
         while 1:
             s = s.lstrip()
-            print("string: '%s'" % s)
             author_ = author.match(s)
             subject_ = subject.match(s)
             title_ = title.match(s)
