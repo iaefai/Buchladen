@@ -56,13 +56,12 @@ class Search:
 
 
 class SearchTerms:
-    authors = []
-    subjects = []
-    titles = []
-    keywords = []
-    isbn = []
-
     def __init__(self, s):
+        self.authors = []
+        self.subjects = []
+        self.titles = []
+        self.keywords = []
+        self.isbn = []
         self.parse(s)
 
     def parse(self, s):

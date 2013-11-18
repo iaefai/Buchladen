@@ -7,6 +7,11 @@ body {
     background: #527ea8;
 }
 
+#main_content {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
 /* search */
 .underline-search {
     width: calc(100% - 40rem);

@@ -27,7 +27,39 @@
                 <h1>No books matching criteria.</h1>
             {{/books}}
             {{#books}}
-                <h1>{{title}}</h1>
+            <div class="book-list-entry">
+	            <span class="title"> {{title}} </span>
+
+                <br>
+
+                <span class="authors">
+                Authors:
+                 {{#authors}}
+                    {{name}}
+                 {{/authors}}
+                </span>
+
+                <br>
+	            <span class="isbn"> {{isbn}} </span>
+
+	            <span class="contact-seller">
+	            <a class="contact" href="/contact-seller/?id={{ user.id }}&bookname={{ title }}" >Contact Seller</a>
+	            </span>
+                <br>
+                <span class="subjects">
+                  Subjects:
+                  {{#subjects}}
+                  {{ subject}},
+                  {{/subjects}}
+                </span>
+
+	<span class="publishers"> {{ publisher }} </span>
+
+	<span class="price"> {{ price }} </span>
+
+	<br/>
+	<span class="posting-user"> User: {{ user.name }} </span>
+            </div>
             {{/books}}
            {% endverbatim %}
         </script>
@@ -44,9 +76,6 @@
             <input type="button" class="button" value="Register">
         </header>
 
-        <span id="status">
-               Not selected
-        </span>
 
         <!--<section class="left column three">-->
             <!--&lt;!&ndash;<div class="actionbox">&ndash;&gt;-->
