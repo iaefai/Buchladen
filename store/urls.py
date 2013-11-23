@@ -13,7 +13,7 @@ urlpatterns = patterns(
     #url(r'^search/isbn/(?P<isbn_number>[^/]+)$', views.isbn, name='isbn'),
     #url(r'^search/author/(?P<author_name>[^/]+)', views.author, name='author'),
     #url(r'^search/title/(?P<title_name>[^/]+)', views.title, name='title'),
-    #url(r'^email-sent/$', views.email_send, name='email_send'),
+    url(r'^email-sent/$', views.email_send, name='email_send'),
 
     # ex: /polls/5/
     #url(r'^(?P<pk>\d+)/$', views.DetailView.as_view(), name='detail'),

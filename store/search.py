@@ -65,7 +65,8 @@ class SearchTerms:
         self.parse(s)
 
     def parse(self, s):
-        keyword = re.compile(r'(?P<words>\w+|"[^"]*")')
+        #keyword = re.compile(r'(?P<words>(\W|[^:])+|"[^"]*")')
+        keyword = re.compile(r'(?P<words>(\w|[+-])+|"[^"]*")')
         author = re.compile('author:' + keyword.pattern)
         subject = re.compile('subject:' + keyword.pattern)
         title = re.compile('title:' + keyword.pattern)

@@ -14,16 +14,33 @@ body {
 
 /* search */
 .underline-search {
-    width: calc(100% - 40rem);
+    width: calc(100% - 46rem);
     border: none;
     background: transparent;
     border-bottom: 2px solid black;
     font-size: 24pt;
-    margin-left: 1em;
+    /*margin-left: 1em;*/
+ /*   padding-left: 2.5rem; */
 }
 
 .underline-search:focus {
     outline: none;
+}
+
+#searchbutton {
+    width: 2.5rem;
+    position: relative;
+    top: 0.7rem;
+    margin-left: 2rem;
+    /*left: 2.5rem; */
+}
+
+#clearbutton {
+    width: 2.5rem;
+    position: relative;
+    top: 0.7rem;
+    left: -2.8rem;
+    visibility: hidden;
 }
 
 /* buttons */

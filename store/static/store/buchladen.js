@@ -10,9 +10,17 @@ $(document).ready(function(e) {
         console.log("unselected");
     });
 
-    $('input[type=text]').on('keydown', function(e) {
-        if (e.which == 13) {
-            e.preventDefault();
+    $('input[type=text]').on('input', function(e) {
+        if ($('#searchbox').val() !== '') {
+            //console.log("not empty");
+            $('#clearbutton').css('visibility', 'visible');
+        } else $('#clearbutton').css('visibility', 'hidden');
+        //console.log("empty");
+    });
+
+    $('input[type=text]').on('keyup', function(e) {
+        // if (e.which == 13) {
+        {   e.preventDefault();
             console.log("Send request: " + $("#searchbox").val());
 
             var result = $.ajax({
@@ -37,4 +45,16 @@ $(document).ready(function(e) {
                 }});
         };
     });
+
+    $('#clearbutton').click(function() {
+        $('#searchbox').val('');
+        $('#searchbox').trigger('input');
+    });
+
+
 });
+
+function search(text) {
+
+
+}
