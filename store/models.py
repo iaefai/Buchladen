@@ -24,7 +24,7 @@ class Book(models.Model):
     isbn = models.CharField(max_length=20)      # no explicit validation yet
     subjects = models.ManyToManyField(Subject)
     publisher = models.CharField(max_length=30)
-    language = (('en', "English"), ('cn', "Chinese"), ('kn', "Klingon"))
+    language = (('en','English'))
     price = models.DecimalField(max_digits=5, decimal_places=2)
     date_added = models.DateField()
     user = models.ForeignKey(User)

@@ -68,17 +68,18 @@ def search(request):
 
 
 def email_send(request):
-    this_id = request.GET.get('id', 'NO_USER_SPECIFIED')
-    bookname = request.GET.get('book', 'NO_BOOK_SPECIFIED')
-    reply_email = request.POST.get('reply_email','NO_REPLY_EMAIL')
-    message = request.POST.get('message','NO_MESSAGE')
+    this_id = request.GET.get('id', 'NO USER SPECIFIED')
+    bookname = request.GET.get('book', 'NO BOOK SPECIFIED')
+    reply_email = request.POST.get('reply_email','NO REPLY EMAIL PROVIDED')
+    phone = request.POST.get('phone','NO PHONE NUMBER PROVIDED')
+    availability = request.POST.get('availability','NO AVAILIBILITY PROVIDED')
+    message = request.POST.get('message','NO MESSAGE PROVIDED')
     user = User.objects.get(id=this_id)
     email = user.email
     subject = 'Buchladen: Someone is interested in your book "'+bookname+'"!'
-    message = message+" TO REPLY TO THIS USER, USE THE PROVIDED EMAIL: "+reply_email
+    message = message+"\n\n\nTO REPLY TO THIS USER, USE THE PROVIDED EMAIL: "+reply_email+"\nOR CONTACT THEM AT THIS PHONE NUMBER: "+phone+'\n\nUSER\'S AVAILABILITY: "'+availability+'"'
     #send_mail(subject, message, 'noreply@buchladen.uwinsocr.ca',[email], fail_silently=False);
-    return render_to_response('store/email-sent.html',
-                              {'user': this_id,'message': message, 'subject': subject},context_instance = RequestContext(request))
+    return render_to_response('store/email-sent.html', context_instance = RequestContext(request))
         
 def isbn(request, isbn_number):
     state = "isbn result page"
