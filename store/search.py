@@ -54,7 +54,6 @@ class Search:
         #    isbn_results = Book.objects.filter(isbn__in = self.terms.isbn)
         return res.distinct()
 
-
 class SearchTerms:
     def __init__(self, s):
         self.authors = []

@@ -8,6 +8,7 @@ urlpatterns = patterns(
     url(r'^login$', views.RegisterLogin.as_view(), name='register_login'),
     url(r'^logout$', views.Logout.as_view(), name='logout'),
     url(r'^search/(?P<search_terms>.+)', views.search_view, name='search_view'),
+    url(r'^recent/(?P<n>.+)', views.most_recent, name='most_recent'),
     #url(r'^login$', views.login_user, name='login_user'),
     #url(r'^contact$', views.ContactView.as_view(), name='contact'),
     url(r'^contact-seller.+', views.contact_seller, name='contact_seller'),
