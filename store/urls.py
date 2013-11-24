@@ -5,6 +5,8 @@ from store import views
 urlpatterns = patterns(
     '',
     url(r'^$', views.IndexView.as_view(), name='index'),
+    url(r'^login$', views.RegisterLogin.as_view(), name='register_login'),
+    url(r'^logout$', views.Logout.as_view(), name='logout'),
     url(r'^search/(?P<search_terms>.+)', views.search_view, name='search_view'),
     #url(r'^login$', views.login_user, name='login_user'),
     #url(r'^contact$', views.ContactView.as_view(), name='contact'),

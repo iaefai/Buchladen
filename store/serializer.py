@@ -21,5 +21,3 @@ class BookSerializer(models.ModelSerialiser):
 class UserSerializer(models.ModelSerialiser):
     class Meta:
         model = User
-
-# pip install git+https://github.com/funkybob/django-nap.git

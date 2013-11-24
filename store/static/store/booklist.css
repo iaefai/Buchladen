@@ -1,7 +1,7 @@
 .book-list-entry {
     padding: 10px 5px;
     margin-bottom: 4px;
-    background-color: rgba(39, 25, 07, 0.7);
+    background-color: rgba(39, 25, 07, 0.3);
 }
 
 a.contact, a.contact:visited {

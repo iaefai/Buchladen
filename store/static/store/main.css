@@ -12,6 +12,18 @@ body {
     padding-right: 1em;
 }
 
+#register_side {
+    float: left;
+}
+
+#login_side {
+    float: right;
+}
+
+#register-dialog {
+    display: none;
+}
+
 /* search */
 .underline-search {
     width: calc(100% - 46rem);
@@ -32,6 +44,8 @@ body {
     position: relative;
     top: 0.7rem;
     margin-left: 2rem;
+    outline: none;
+    disabled: true;
     /*left: 2.5rem; */
 }
 
@@ -41,6 +55,7 @@ body {
     top: 0.7rem;
     left: -2.8rem;
     visibility: hidden;
+    outline: none;
 }
 
 /* buttons */
