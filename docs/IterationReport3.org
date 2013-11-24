@@ -1,0 +1,113 @@
+#+TITLE: Iteration Report 3 - Team 10
+#+AUTHOR: Matt Clifford, Jeff Drake, Jeremy High, Stephen Nusko, Matt Renaud
+
+#+LATEX_HEADER: \addtolength{\textheight}{1in}
+#+LATEX_HEADER: \addtolength{\voffset}{-0.5in}
+#+LATEX_HEADER: \usepackage{enumitem}
+#+LATEX_HEADER: \setlist{nolistsep}
+#+LATEX_HEADER: \renewcommand\tableofcontents{\vspace{-5em}}
+
+* Iteration Report 3
+** Milestones
+*** Full Registration and Login Functionality (Complete)
+- Ability for new users to create an account and login.
+
+*** Manage Book Listing (Complete)
+- Ability for users to manage the books they have posted:
+  + Post new book.
+  + Manage current posted books.
+  + Remove books.
+
+*** Design Docs (In progress)
+- Write well formatted and esthetically pleasing design docs.
+- Full design docs will be ready for the Final Report.
+
+*** Presentation Slides (Complete)
+- Complete slides for group presentation to class.
+  
+*** Search Functionality (Complete)
+- Improve search functionality for books currently listed.
+  
+** Deliverables
+*** Better Website Styling and Formatting (Complete)
+- Simplistic design to ease usability.
+  
+*** Improved Contacting Seller (Complete)
+- Added more fields to contact seller page.
+  
+*** Improved Search Functionality (Complete)
+- Use of AJAX to dynamically update page when search terms are being
+  entered.
+- Provides a much more fluid user experience when searching for books.
+- Search within specific fields.
+  
+** Meetings This Iteration
+- Informal meetings every few days as schedules permitted.
+- Longer meetings and work sessions on weekends to implement
+  functionality and discuss tasks to be completed.
+- End of iteration meeting with Dr. Wu upcoming this week.
+ 
+** Problems Encountered
+- Time constraints of group members have been difficult to work
+  around.
+- Heavy workload with other courses including midterms and other
+  projects. 
+
+** Tasks For This Iteration For Each Member
+
+*** Clifford, Matt
+- Contact seller functionality improvements.
+- Post book functionality.
+
+*** Drake, Jeffrey
+- New website styling.
+- Advanced search functionality using:
+  + JSON
+  + Ajax
+ 
+*** High, Jeremy
+- Enhancing website styling.
+
+*** Nusko, Stephen
+- Improve unit test suite to account for changes in Django v1.6.
+- Wrote testing docs.
+
+*** Renaud, Matt
+- Website styling.
+- Book search regex to account for special characters.
+- Project management tasks.
+  + Redmine task management.
+  + Report writing.
+- Presentation Slides.
+
+
+** Accomplishments This Iteration
+See Milestones and Deliverables
+
+** Work Distribution
+|----------------+---------------+------------+-------------+---------------+-------------|
+|                | Matt Clifford | Jeff Drake | Jeremy High | Stephen Nusko | Matt Renaud |
+|----------------+---------------+------------+-------------+---------------+-------------|
+| Management     |            0% |         0% |          0% |            0% |        100% |
+| Searching      |            0% |        90% |          0% |            0% |         10% |
+| Docs           |            0% |         0% |          0% |           80% |          0% |
+| Contact Seller |          100% |         0% |          0% |            0% |          0% |
+| User Login     |            0% |        80% |         20% |            0% |          0% |
+| Site Styling   |            0% |        20% |         40% |            0% |         40% |
+
+
+
+
+** References
+- Python Tutorial :: http://docs.python.org/3/tutorial/
+- Django Homepage :: https://www.djangoproject.com/
+- Unit Test :: https://docs.djangoproject.com/en/dev/topics/testing/
+- Source :: https://github.com/iaefai/Buchladen
+- RedMine :: https://redmine.cs.uwindsor.ca/projects/team10/
+- Django Nap :: https://github.com/funkybob/django-nap
+- Json :: http://www.json.org/
+- JQuery-Ajax :: http://api.jquery.com/jQuery.ajax/
+                
+     
+     
+
