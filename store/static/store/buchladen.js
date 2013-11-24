@@ -2,6 +2,7 @@
 $(document).ready(function(e) {
     console.log("Run");
 
+
     window.onpopstate = function(e) {
         //console.log("pop state " + location);
         var note = location.hash.split("#!/")[1];
@@ -9,6 +10,8 @@ $(document).ready(function(e) {
       //      console.log("Hashed location: " + note);
             search(note);
             $("#searchbox").val(note);
+        } else {
+            recent(10);
         }
     }
 
@@ -189,9 +192,14 @@ $(document).ready(function(e) {
         $('#register-dialog').dialog("open");
     });
 
+    if (location.hash.split("#!/")[1] === "") {
+        recent(10);
+    }
 });
 
 function search(text) {
+    if (text === "") recent(10);
+    else {
     var result = $.ajax({
         url: '/search/' + text,
         type: 'GET',
@@ -212,4 +220,29 @@ function search(text) {
             console.log("Error received: " + textStatus);
             console.log(errorThrown);
         }});
+    }
+}
+
+function recent(n) {
+    console.log("Recent numbers!")
+    var result = $.ajax({
+        url: '/recent/10',
+        type: 'GET',
+        dataType: 'json',
+        success: function(data, textStatus, jqXHR) {
+            //console.log("Received request: " + textStatus);
+            //console.log(data);
+
+            var d = { books: data };
+            //console.log(d);
+            var template = $('#search_template').html();
+            var output = Mustache.render(template, d);
+            //console.log(output);
+            $('#main_content').html(output);
+
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log("Error received: " + textStatus);
+            console.log(errorThrown);
+       }});
 }
