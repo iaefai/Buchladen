@@ -52,7 +52,7 @@ class Search:
         #
         #if self.terms.isbn is not []:
         #    isbn_results = Book.objects.filter(isbn__in = self.terms.isbn)
-        return res
+        return res.distinct()
 
 
 class SearchTerms:

@@ -39,13 +39,6 @@ $(document).ready(function(e) {
         var url = [location.protocol, '//', location.host, location.pathname].join('');
         history.pushState(null, "", [url, '#!/', search_string].join(''));
         search(search_string);
-
-        // if (e.which == 13) {
-        //{   e.preventDefault();
-        //    console.log("Send request: " + $("#searchbox").val());
-
-
-        //};
     });
 
     $('#clearbutton').click(function() {

@@ -3,7 +3,7 @@ from . import models
 
 class BookAdmin(admin.ModelAdmin):
     list_display = ( 'title', 'author_names', 'isbn', 'subject_list', 'publisher',
-                     'language', 'price', 'date_added', 'user' )
+                     'price', 'date_added', 'user' )
 
 
 admin.site.register(models.Author)
