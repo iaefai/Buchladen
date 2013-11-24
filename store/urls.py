@@ -16,7 +16,7 @@ urlpatterns = patterns(
     #url(r'^search/author/(?P<author_name>[^/]+)', views.author, name='author'),
     #url(r'^search/title/(?P<title_name>[^/]+)', views.title, name='title'),
     url(r'^email-sent/$', views.email_send, name='email_send'),
-    url(r'^post-book.+', views.post_book, name='post_book'),
+    url(r'^post-book.+', views.Post.as_view(), name='post_book'),
     # ex: /polls/5/
     #url(r'^(?P<pk>\d+)/$', views.DetailView.as_view(), name='detail'),
     # ex: /polls/5/results/

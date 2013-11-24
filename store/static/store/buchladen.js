@@ -112,7 +112,7 @@ $(document).ready(function(e) {
         $('#post-book-dialog').dialog("open");
     });
 
-    $('#post_book').submit(function(event) {
+    $('#post_book_form').submit(function(event) {
         event.preventDefault();
         var form = $(this);
         var title = form.find("input[name='title']").val();
@@ -125,11 +125,11 @@ $(document).ready(function(e) {
 
         var posting = $.post(url, {
             title : title,
-	    authors : authors,
-	    isbn : isbn,
-	    subjects : subjects,
-	    publisher : publisher,
-	    price : price
+            authors : authors,
+            isbn : isbn,
+            subjects : subjects,
+            publisher : publisher,
+            price : price
         });
 
         posting.done(function(data) {
