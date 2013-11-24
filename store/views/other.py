@@ -82,3 +82,11 @@ def search_view(request, search_terms):
     print("Returned " + str(results))
     book_serial = BookSerializer()
     return book_serial.list_deflate(results)
+
+@json_view
+def most_recent(request, n):
+    print("Searching for: %d most recent books" % int(n))
+    results = list(Book.objects.order_by('date_added').reverse()[:int(n)])
+    print("Returned " + str(results))
+    book_serial = BookSerializer()
+    return book_serial.list_deflate(results)
