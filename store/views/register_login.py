@@ -5,6 +5,9 @@ from django.template.response import SimpleTemplateResponse
 from django.contrib.auth import authenticate, login, logout
 
 from django.template.response import TemplateResponse
+import logging
+
+logger = logging.getLogger(__name__)
 
 #class RegisterLogin(TemplateView):
 #    template_name = 'store/register_login.html'
@@ -26,11 +29,14 @@ class RegisterLogin(View):
         user = authenticate(username=username, password = password)
         if user is not None:
             if user.is_active:
+                logger.info("Login successful: %s" % username)
                 login(request, user)
                 return HttpResponse("redirect")
             else:
+                logger.error("Disabled account: %s" % username)
                 return HttpResponse("Disabled account")
         else:
+            logger.error("Invalid account: %s" % username)
             return HttpResponse("Invalid login")
 
 
