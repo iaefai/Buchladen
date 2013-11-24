@@ -8,11 +8,13 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="http://fonts.googleapis.com/css?family=Headland+One%7COpen+Sans:400,300&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css"></link>
-
+        <link href="{% static 'css/ui-lightness/jquery-ui-1.10.3.custom.min.css' %}" rel="stylesheet">
         <!--<link rel="stylesheet" href="{% static "css/zimit.min.css" %}">-->
 
-        <script src="{% static "js/jquery-2.0.3.min.js" %}" defer="defer"></script>
-        <script src="{% static "js/jquery.mustache.js" %}" defer="defer"></script>
+        <script src="{% static 'js/jquery-2.0.3.min.js' %}" defer="defer"></script>
+        <script src="{% static 'js/jquery.mustache.js' %}" defer="defer"></script>
+        <script src="{% static 'js/jquery-ui-1.10.3.custom.min.js' %}" defer="defer"></script>
+
         <!--<script src="{% static "js/bootstrap.min.js" %}" defer="defer"></script>-->
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -20,7 +22,7 @@
         <!--<link rel="stylesheet" href="{% static "store/layers.min.css" %}">-->
         <link rel="stylesheet" href="{% static "store/main.css" %}">
         <link rel="stylesheet" href="{% static "store/booklist.css" %}" />
-        <script src="{% static "store/buchladen.js" %}" defer="defer"> </script>
+        <script src="{% static 'store/buchladen.js' %}" defer="defer"> </script>
         <script id="search_template" type="text/html">
            {% verbatim %}
             {{^books}}
@@ -72,9 +74,23 @@
             <img src="{% static 'store/iconmonstr-magnifier-4-icon.svg' %}" id="searchbutton">
             <input type="text" class="underline-search" id="searchbox" placeholder="Search..." autocomplete="off" spellcheck="false">
             <input type="image" src="{% static 'store/iconmonstr-x-mark-icon.svg' %}" id="clearbutton">
-            <input type="button" class="button" value="Post">
-            <input type="button" class="button" value="Register">
+            <input type="button" class="button" value="Post" id="post">
+            {% if user.is_authenticated %}
+                <input type="button" class="button" value="Logout" id="logout">
+            {% else %}
+                <input type="button" class="button" value="Register" id="register">
+            {% endif %}
+
+
         </header>
+
+        {% if user.is_authenticated %}
+            <h1>USER IS LOGGED IN!</h1>
+        {% endif %}
+
+        <div id="register-dialog" title="Register / Login">
+            Hail Mary!
+        </div>
 
 
         <!--<section class="left column three">-->

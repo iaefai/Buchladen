@@ -41,20 +41,7 @@ class Book(models.Model):
     def __str__(self):
         return self.title
 
-    #description = models.TextField()
-
-    #def default(self):
-    #    """
-    #    Convert model to JSON
-    #    """
-    #    dict = {}
-    #    dict['title'] = self.title
-    #    dict['isbn'] = self.isbn
-    #    dict['publisher'] = self.publisher
-    #    dict['language'] = self.language
-    #    dict['price'] = self.price
-    #    dict['date_added'] = self.date_added
-    #    dict['user'] = self.user.username
-    #    dict['authors'] =
-
+class Customer(models.Model):
+    user = models.OneToOneField(User)
+    phoneNumber = models.CharField(max_length=14)
 

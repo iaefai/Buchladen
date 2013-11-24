@@ -12,6 +12,14 @@ body {
     padding-right: 1em;
 }
 
+#register_side {
+    float: left;
+}
+
+#login_side {
+    float: right;
+}
+
 /* search */
 .underline-search {
     width: calc(100% - 46rem);
