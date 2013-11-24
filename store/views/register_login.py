@@ -38,3 +38,7 @@ class Logout(View):
     def post(self, request, *args, **kwargs):
         logout(request)
         return HttpResponse("logged out")
+
+class Register(View):
+    def post(self, request, *args, **kwargs):
+        pass

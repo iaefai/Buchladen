@@ -20,6 +20,10 @@ body {
     float: right;
 }
 
+#register-dialog {
+    display: none;
+}
+
 /* search */
 .underline-search {
     width: calc(100% - 46rem);

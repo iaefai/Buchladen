@@ -30,7 +30,7 @@ $(document).ready(function(e) {
         //console.log("empty");
     });
 
-    $('input[type=text]').on('keyup', function(e) {
+    $('#searchbox').on('keyup', function(e) {
         var search_string = $("#searchbox").val();
 
      //   console.log("Searching for " + search_string);
@@ -74,11 +74,37 @@ $(document).ready(function(e) {
             autoOpen: false
         });
 
-    $('#register').on("click", function() {
-        var form = $.ajax({
+
+        $('#login_form').submit(function(event) {
+            event.preventDefault();
+            var form = $(this);
+            var username = form.find("input[name='username']").val();
+            var password = form.find("input[name='password']").val();
+            var url = form.attr("action");
+
+            var posting = $.post(url, {
+                username: username,
+                password: password
+            });
+
+            posting.done(function(data) {
+                console.log(data);
+                if (data === 'redirect') {
+                    location.reload(true);
+                }
+            });
+
+            posting.fail(function(jqXHR, textStatus, errorThrown) {
+                console.log("Failed request: " + textStatus);
+                console.log(jqXHR);
+            });
+        });
+
+         /*   var form = $.ajax({
             url: '/login',
             type: 'GET',
             dataType: 'html',
+            cache: false,
             success: function(data, textStatus, jqXHR) {
                 console.log("Open dialog");
                 $('#register-dialog').html(data);
@@ -113,6 +139,8 @@ $(document).ready(function(e) {
                 console.log(errorThrown);
         }});
 
+*/
+    $('#register').on("click", function() {
         $('#register-dialog').dialog("open");
     });
 

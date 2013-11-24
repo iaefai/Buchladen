@@ -60,13 +60,6 @@ def login_user(request):
                               {'state': state, 'username': username},
                               context_instance = RequestContext(request))
 
-def search(request):
-    state = "Search page"
-#	form = SearchForm();
-    return render_to_response('store/search.html',
-                              {'state': state}, context_instance = RequestContext(request))
-
-
 def email_send(request):
     this_id = request.GET.get('id', 'NO_USER_SPECIFIED')
     bookname = request.GET.get('book', 'NO_BOOK_SPECIFIED')
@@ -80,77 +73,6 @@ def email_send(request):
     return render_to_response('store/email-sent.html',
                               {'user': this_id,'message': message, 'subject': subject},context_instance = RequestContext(request))
         
-def isbn(request, isbn_number):
-    state = "isbn result page"
-    #books = []
-    #target = isbn_number
-
-    books = Book.objects.filter(isbn__icontains = isbn_number).order_by('title')
-
-    #for book in Book.objects.all():
-    #    if book.isbn == target:
-    #        books.append(book)
-    #    elif "978"+target == book.isbn:
-    #        books.append(book)
-    return render_to_response('store/book_list.html',
-                              {'state': state, 'book_list': books, 'title_banner': 'Isbn Results'})
-
-
-def author(request, author_name):
-    state = "author result page"
-
-    author = Author.objects.filter(name__icontains = author_name)
-    books = Book.objects.filter( authors__in = author).order_by('title')
-
-    books = list(Book.objects.filter( authors = author))
-    sort(books, author_name.lower(), "title")
-
-    return render_to_response('store/book_list.html',
-                              {'state': state, 'book_list': books, 'title_banner': 'Author Results'})
-
-
-def title(request, title_name):
-    state = "title result page"
-    target = title_name.lower()
-
-    books = list(Book.objects.filter(title__icontains = target))
-    sort(books, target, "title")
-
-    return render_to_response('store/book_list.html',
-                              {'state': state, 'book_list': books, 'title_banner': 'Title Results'})
-
-def sort(books, target, field):
-    temp = []
-    if field == "title":
-        for book in books:
-            if target == book.title.lower():
-                temp.append(book)
-                books.remove(book)
-
-        for i in range(0, len(books)):
-            for j in range(i+1, len(books)):
-                if books[i].title > books[j].title:
-                    books[i], books[j] = books[j], books[i]
-
-    else:
-        for book in books:
-            for author in book.authors.all():
-                if target == author.name.lower():
-                    temp.append(book)
-                    books.remove(book)
-
-        for i in range(0, len(books)):
-            for j in range(i+1, len(books)):
-                if books[i].authors[0] > books[j].authors[0]:
-                    books[i], books[j] = books[j], books[i]
-
-    if temp:
-        for i in range(0, len(temp)):
-            for j in range(i+1, len(temp)):
-                if temp[i].title > temp[j].title:
-                    temp[i], temp[j] = temp[j], temp[i]
-        for i in range(0, len(temp)):
-            books.insert(0, temp[i])
 
 @json_view
 def search_view(request, search_terms):

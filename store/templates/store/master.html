@@ -1,4 +1,5 @@
 {% load staticfiles %}
+{% load register_dialog %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -76,7 +77,7 @@
             <input type="image" src="{% static 'store/iconmonstr-x-mark-icon.svg' %}" id="clearbutton">
             <input type="button" class="button" value="Post" id="post">
             {% if user.is_authenticated %}
-                <input type="button" class="button" value="Logout" id="logout">
+                <input type="button" class="button" value="{{ user.first_name }}" id="logout">
             {% else %}
                 <input type="button" class="button" value="Register" id="register">
             {% endif %}
@@ -84,12 +85,8 @@
 
         </header>
 
-        {% if user.is_authenticated %}
-            <h1>USER IS LOGGED IN!</h1>
-        {% endif %}
-
-        <div id="register-dialog" title="Register / Login">
-            Hail Mary!
+        <div id="register-dialog" title="Register / Login" style="display: none;">
+            {% register_dialog %}
         </div>
 
 
