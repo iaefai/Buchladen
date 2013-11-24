@@ -76,7 +76,7 @@
             <input type="text" class="underline-search" id="searchbox" placeholder="Search..." autocomplete="off" spellcheck="false">
             <input type="image" src="{% static 'store/iconmonstr-x-mark-icon.svg' %}" id="clearbutton">
 
-	    <a href="/post-book/"><input type="button" class="button" value="Post" id="post"></a>
+	    <input type="button" class="button" value="Post" id="post_book"/>
             {% if user.is_authenticated %}
                 <input type="button" class="button" value="{{ user.first_name }}" id="logout">
             {% else %}
@@ -88,6 +88,30 @@
 
         <div id="register-dialog" title="Register / Login" style="display: none;">
             {% register_dialog %}
+        </div>
+
+	<div id="post-book-dialog" title="Post Book" style="display: none;">
+          <form action="/post-book" id="post_book">
+	    <label for="Title">Title</label>
+	    <input type="text" id="title" name="title">
+	    <br>
+	    <label for="authors">Authors</label>
+	    <input type="text" id="authors" name="authors">
+	    <br>
+	    <label for="isbn">ISBN</label>
+	    <input type="text" id="isbn" name="isbn">
+	    <br>
+	    <label for="subjects">Subjects</label>
+	    <input type="text" id="subjects" name="subjects">
+	    <br>
+	    <label for="publisher">Publisher</label>
+	    <input type="text" id="publisher" name="publisher">
+	    <br>
+	    <label for="price">Price</label>
+	    <input type="text" id="price" name="price">
+	    <br>
+	    <input type="submit" value="Post Book">
+	  </form>
         </div>
 
 

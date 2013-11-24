@@ -99,6 +99,51 @@ $(document).ready(function(e) {
                 console.log(jqXHR);
             });
         });
+    
+    $('#post-book-dialog').dialog({
+        width: 640,
+        height: 400,
+        modal: true,
+        resizable: false,
+        autoOpen: false
+    });
+
+    $('#post_book').on("click", function() {
+        $('#post-book-dialog').dialog("open");
+    });
+
+    $('#post_book').submit(function(event) {
+        event.preventDefault();
+        var form = $(this);
+        var title = form.find("input[name='title']").val();
+        var authors = form.find("input[name='authors']").val();
+        var isbn = form.find("input[name='isbn']").val();
+        var subjects = form.find("input[name='subjects']").val();
+        var publisher = form.find("input[name='publisher']").val();
+        var price = form.find("input[name='price']").val();
+        var url = form.attr("action");
+
+        var posting = $.post(url, {
+            title : title,
+	    authors : authors,
+	    isbn : isbn,
+	    subjects : subjects,
+	    publisher : publisher,
+	    price : price
+        });
+
+        posting.done(function(data) {
+            console.log(data);
+            if (data === 'redirect') {
+                location.reload(true);
+            }
+        });
+
+        posting.fail(function(jqXHR, textStatus, errorThrown) {
+            console.log("Failed request: " + textStatus);
+            console.log(jqXHR);
+        });
+    });
 
          /*   var form = $.ajax({
             url: '/login',
