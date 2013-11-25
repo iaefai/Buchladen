@@ -64,12 +64,17 @@
 - Advanced search functionality using:
   + JSON
   + Ajax
+- Dialog boxes for registration and login.
+- Login/Logout functionality.
  
 *** High, Jeremy
 - Enhancing website styling.
+- Show top $n$ results on home page if not searching.
 
 *** Nusko, Stephen
+- Updated and added new test cases.
 - Improve unit test suite to account for changes in Django v1.6.
+- Started work on final report.
 - Wrote testing docs.
 
 *** Renaud, Matt
@@ -79,6 +84,7 @@
   + Redmine task management.
   + Report writing.
 - Presentation Slides.
+- Administrative and management tasks.
 
 
 ** Accomplishments This Iteration
@@ -89,11 +95,13 @@ See Milestones and Deliverables
 |                | Matt Clifford | Jeff Drake | Jeremy High | Stephen Nusko | Matt Renaud |
 |----------------+---------------+------------+-------------+---------------+-------------|
 | Management     |            0% |         0% |          0% |            0% |        100% |
-| Searching      |            0% |        90% |          0% |            0% |         10% |
-| Docs           |            0% |         0% |          0% |           80% |          0% |
+| Searching      |            0% |        70% |         20% |            0% |         10% |
+| Docs           |            0% |         0% |          0% |           80% |         20% |
 | Contact Seller |          100% |         0% |          0% |            0% |          0% |
-| User Login     |            0% |        80% |         20% |            0% |          0% |
-| Site Styling   |            0% |        20% |         40% |            0% |         40% |
+| User Login     |            0% |       100% |          0% |            0% |          0% |
+| Site Styling   |            0% |        50% |          0% |            0% |         50% |
+| Final Report   |            0% |         0% |          0% |          100% |          0% |
+| Testing        |            0% |         0% |          0% |          100% |          0% |
 
 
 
