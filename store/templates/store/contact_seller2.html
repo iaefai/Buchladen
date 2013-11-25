@@ -23,49 +23,6 @@
         <!--<link rel="stylesheet" href="{% static "store/layers.min.css" %}">-->
         <link rel="stylesheet" href="{% static "store/main.css" %}">
         <link rel="stylesheet" href="{% static "store/booklist.css" %}" />
-        <script src="{% static 'store/buchladen.js' %}" defer="defer"> </script>
-        <script id="search_template" type="text/html">
-           {% verbatim %}
-            {{^books}}
-                <h1>No books matching criteria.</h1>
-            {{/books}}
-            {{#books}}
-            <div class="book-list-entry">
-	            <span class="title"> {{title}} </span>
-
-                <br>
-
-                <span class="authors">
-                Authors:
-                 {{#authors}}
-                    {{name}}
-                 {{/authors}}
-                </span>
-
-                <br>
-	            <span class="isbn"> {{isbn}} </span>
-
-	            <span class="contact-seller">
-		      <a class="contact" href="/contact-seller/?id={{ user.id }}&bookname={{ title }}" >Contact Seller</a>
-	            </span>
-                <br>
-                <span class="subjects">
-                  Subjects:
-                  {{#subjects}}
-                  {{ subject}},
-                  {{/subjects}}
-                </span>
-
-	<span class="publishers"> {{ publisher }} </span>
-
-	<span class="price"> {{ price }} </span>
-
-	<br/>
-	<!--<span class="posting-user"> User: {{ user.name }} </span> -->
-            </div>
-            {{/books}}
-           {% endverbatim %}
-        </script>
 
     </head>
     <body>

@@ -2,16 +2,41 @@
     padding: 10px 5px;
     margin-bottom: 4px;
     background-color: rgba(39, 25, 07, 0.0);
-    border-bottom: 2px solid black;
+    background: #527ea8;
+    border-bottom: 2px solid #224e78;
 }
 
 a.contact, a.contact:visited {
+    width: 7rem;
+    font-family: 'Segoe UI', 'Open Sans', Arial, sans-serif;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: #ED5E2F;
+    color: #FFF;
+    border: 0px none;
+    outline: 0px none;
+/*
     color: rgba(255, 150, 150, 1);
     background-color: rgba(39, 25, 07, 0);
     padding: 6px 10px 10px 6px;
     text-decoration: none;
     margin-right: 10px;
+    */
 }
+
+a.contact:hover {
+    background: #74A599;
+}
+
+a.contact:active {
+    background: #F6A953;
+}
+
 
 .book-list-entry .contact-seller {
     float: right;

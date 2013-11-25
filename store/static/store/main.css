@@ -233,3 +233,39 @@ section h1 {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
+
+.ui-dialog {
+    color: white;
+    background: #224e78;
+    border: 0px;
+}
+
+.labels {
+    float: left;
+}
+
+#contact-seller-form .labels {
+    width: 8em;
+}
+
+#post-book-dialog .labels {
+    width: 4.8em;
+}
+
+#register_side .labels {
+    width: 6em;
+}
+
+#login_side .labels {
+    width: 5.3em;
+}
+
+
+.ui-dialog form {
+    color: white;
+}
+
+form {
+    
+}

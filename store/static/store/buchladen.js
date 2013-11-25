@@ -148,6 +148,47 @@ $(document).ready(function(e) {
         });
     });
 
+    $('#contact-seller-dialog').dialog({
+        width: 640,
+        height: 400,
+        modal: true,
+        resizable: false,
+        autoOpen: false
+    });
+
+    $('#contact_seller').on("click", function() {
+        $('#contact-seller-dialog').dialog("open");
+    });
+
+    $('#contact_seller_form').submit(function(event) {
+        event.preventDefault();
+        var form = $(this);
+        var reply_email = form.find("input[name='reply_email']").val();
+        var reply_phone = form.find("input[name='reply_phone']").val();
+	var availability = form.find("input[name='availability']").val();
+        var message = form.find("input[name='message']").val();
+        var url = form.attr("action");
+
+        var posting = $.post(url, {
+	    reply_email : reply_email,
+	    reply_phone : reply_phone,
+	    availability : availability,
+	    message : message
+        });
+
+        posting.done(function(data) {
+            console.log(data);
+            if (data === 'redirect') {
+                location.reload(true);
+            }
+        });
+
+        posting.fail(function(jqXHR, textStatus, errorThrown) {
+            console.log("Failed request: " + textStatus);
+            console.log(jqXHR);
+        });
+    });
+
          /*   var form = $.ajax({
             url: '/login',
             type: 'GET',
