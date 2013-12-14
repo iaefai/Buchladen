@@ -16,8 +16,12 @@
 \usepackage{hyperref}
 \tolerance=1000
 \providecommand{\alert}[1]{\textbf{#1}}
+\usepackage{varioref}
 
-\title{Final Report}
+\usepackage{setspace}
+\onehalfspacing
+
+\title{03-60-311 Final Report}
 \author{Matt Clifford, Jeff Drake, Jeremy High, Stephen Nusko, Matt Renaud}
 \date{\today}
 
@@ -25,6 +29,15 @@
 
 \maketitle
 
+\vspace{1in}
+
+\begin{center}
+  University of Windsor
+
+  Computer Science Department
+\end{center}
+
+\newpage
 \setcounter{tocdepth}{3}
 \tableofcontents
 \vspace*{1cm}
@@ -49,9 +62,87 @@
 
 \section{Technical Documentation}
 
+In this section we present several technical aspects of the online
+used book store that we have designed and developed.  We begin by
+discussing the platform that we used to deploy the web application,
+any setup required for the environment, as well as the application
+framework and the major programming languages that have been used in
+the implementation. We then go on to discuss some of the tools and
+algorithms that we used throughout the development cycle and conclude
+the section with an overview of the database tables and schema that we
+used for the persistent storage of data.
+
 \subsection{Programming Language and Platform}
 
-\subsection{Algorithms, Tools, and Environment}
+We made the decision to deploy our web application on the GNU/Linux
+platform, it is currently hosted on the University of Windsor's
+Student Operated Computing Resources (SOCR) server which is running
+Debian Linux. The reason why Linux was chosen as the development
+platform is because most servers run some distribution of Linux which
+made the decision quite simple.
+
+After we had decided on the platform, we were faced with the challenge
+of selecting a programming language and a framework to use to build
+the application. Since we were writing software for the web, we
+obviously needed to use HTML and CSS, but we still needed to decide on
+the language to use for the backend. All of the members of the group
+had previous experience developing web applications using PHP, and all
+unanimously agreed that although PHP has become a defacto standard for
+web development, using a more structured language and a framework
+would ease the development and debugging process and as a result we
+decided to use Django, a web application framework written in Python.
+
+\subsubsection{Django}
+
+Although none of our group members were incredibly familiar with
+Python, we anticipated that the time saved by using a framework would
+outweigh the time required to learn a new language and become familiar
+with the architecture of the system. In the end, making the choice to
+use Django was an excellent decision and allowed us to focus more of
+our time on implementing features than on writing all aspects of the
+system from the ground up and reinventing the wheel.
+
+Django is described on its website (see Section~\vref{sec-reference})
+as:
+
+\begin{quotation}
+  ... a high-level Python Web framework that encourages rapid
+  development and clean, pragmatic design.
+\end{quotation}
+
+and follows the Model, View, Controller software pattern. This pattern
+separates the concerns of
+
+
+\subsection{Ajax}
+
+In addition to the languages that we used, we also took advantage of
+several web technologies in order to modernize our website. The one
+that we used the most was Ajax (Asynchronous JavaScript and Xml),
+which allows for requests to be made to the server and updates to be
+made to the page without the page having to be reloaded. This allowed
+us to update the search results as search terms were being entered and
+the page could be dynamically updated based on the results.
+
+Many web sites such as Facebook and Google use Ajax to make sure that
+the content of the page is up to date without requiring any page
+reloads. Having this as part of a website is something that is almost
+mandatory to have the feel of a modern web site.
+
+In addition to having a smoother user experience, using Ajax improves
+the performance of the site as well as decreasing bandwidth usage. By
+sending sending only the results to the client and not all of the HTML
+and CSS over again saves bandwidth as well as decreases the time
+required to view the latest results. 
+
+\subsection{Development Tools}
+
+In order to develop the web application, some of the members of our
+group used a python development environment called PyCharm which has
+built in Django support to ease the development of the python
+code, while other members of the group used text editors to write the
+HTML and CSS required to give the site its structure and style.
+
 
 \subsection{Database Tables and Schema}
 
@@ -182,6 +273,19 @@
 		\subsubsection{Reject/Accept System}
 			The system has been submitted to the client for final review and acceptance.
 \section{Reference}
+\label{sec-reference}
+
+\begin{description}
+\item[Python Tutorial] \href{http://docs.python.org/3/tutorial/}{http://docs.python.org/3/tutorial/}
+\item[Django Homepage] \href{https://www.djangoproject.com/}{https://www.djangoproject.com/}
+\item[Unit Test] \href{https://docs.djangoproject.com/en/dev/topics/testing/}{https://docs.djangoproject.com/en/dev/topics/testing/}
+\item[Source] \href{https://github.com/iaefai/Buchladen}{https://github.com/iaefai/Buchladen}
+\item[RedMine]
+  \href{https://redmine.cs.uwindsor.ca/projects/team10/}{https://redmine.cs.uwindsor.ca/projects/team10/}
+\item[Django Nap] \href{https://github.com/funkybob/django-nap}{https://github.com/funkybob/django-nap}
+\item[Json] \href{http://www.json.org/}{http://www.json.org/}
+\item[JQuery-Ajax] \href{http://api.jquery.com/jQuery.ajax/}{http://api.jquery.com/jQuery.ajax/}
+\end{description}
 
 
 \end{document}
