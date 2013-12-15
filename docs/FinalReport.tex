@@ -29,7 +29,7 @@
 
 \maketitle
 
-\vspace{1in}
+\vspace{1.5in}
 
 \begin{center}
   University of Windsor
@@ -43,24 +43,34 @@
 \vspace*{1cm}
 
 \section{Introduction}
+\label{sec-introduction}
 
 \subsection{Problem Statement}
+\label{sec-prodlem-statement}
 
 \subsection{Project Overview}
+\label{sec-project-overview}
 
 \subsection{Release Notes Summarizing the Last Transition}
+\label{sec-release-notes}
 
 \section{Software Requirements}
+\label{sec-software-reqs}
 
 \section{Design Specification}
+\label{sec-design-specs}
 
 \subsection{Software Architecture (with diagrams)}
+\label{sec-software-architecture}
 
 \subsection{Sequence Diagrams}
+\label{sec-sequence-diagrams}
 
 \subsection{Class Diagrams (and their relationships)}
+\label{sec-class-diagrams}
 
 \section{Technical Documentation}
+\label{sec-technical-docs}
 
 In this section we present several technical aspects of the online
 used book store that we have designed and developed.  We begin by
@@ -73,6 +83,7 @@ the section with an overview of the database tables and schema that we
 used for the persistent storage of data.
 
 \subsection{Programming Language and Platform}
+\label{sec-language-and-platform}
 
 We made the decision to deploy our web application on the GNU/Linux
 platform, it is currently hosted on the University of Windsor's
@@ -93,6 +104,7 @@ would ease the development and debugging process and as a result we
 decided to use Django, a web application framework written in Python.
 
 \subsubsection{Django}
+\label{sec-django}
 
 Although none of our group members were incredibly familiar with
 Python, we anticipated that the time saved by using a framework would
@@ -111,10 +123,18 @@ as:
 \end{quotation}
 
 and follows the Model, View, Controller software pattern. This pattern
-separates the concerns of
+allows for the separation of concerns and allows for the writing of
+more modulal, maintainable code. The backend that interacts with the
+database is separated from the code that is used to generate the front
+end view that the end user sees. This allowed us throughout the
+development process to have different people working on different
+areas and features of the application at the same time and once a
+component was finished it could be seamlessly included into the
+system.
 
 
 \subsection{Ajax}
+\label{sec-ajax}
 
 In addition to the languages that we used, we also took advantage of
 several web technologies in order to modernize our website. The one
@@ -136,6 +156,7 @@ and CSS over again saves bandwidth as well as decreases the time
 required to view the latest results. 
 
 \subsection{Development Tools}
+\label{sec-development-tools}
 
 In order to develop the web application, some of the members of our
 group used a python development environment called PyCharm which has
@@ -145,10 +166,13 @@ HTML and CSS required to give the site its structure and style.
 
 
 \subsection{Database Tables and Schema}
+\label{sec-database-schema}
 
 \section{User Documentation}
+\label{sec-user-docs}
 
 \section{Software Test Plan}
+\label{sec-software-test-plan}
 	\subsection{Overview of Testing}
 		When designing the software test plan it is important to remember the environment that it will be made, and released in.
 		We will start with an exploration of the purpose, expectations, and environment, before proceeding with an in-depth analysis of all the software testing processes used.
