@@ -54,8 +54,22 @@
 
 \section{Design Specification}
 
-\subsection{Software Architecture (with diagrams)}
-
+\subsection{Software Architecture (Chapter 6)}
+	As suggested in Chapter 6 Section 6.2 of the textbook, a full 4 + 1 view of the architecture is overly extensive for an agile approach.
+	We therefore will focus on some patterns that we found helpful in understanding the design of our system.
+	\subsubsection{Model-View-Controller (Section 6.2)}
+		The Model-View-Controller pattern was found to be very applicable, and useful in separation of the data and representation. 
+		See figure 6.4 below. 
+		The model part is based on our SQLite database, while our controller was the Django framework which handled all HTTP requests and application logic. 
+		While the use of Ajax allowed for dynamically generating the page and forms as needed. \\
+		\centerline{\includegraphics[scale=0.5]{./images/MVC}}
+	\subsubsection{Application architectures}
+		When we discussed the design of our application and studied system outlines, we found from Section 6.4.2 that our program as a web application is very much an information system, with a shared database which connects through layers to the user. 
+		See figure 6.17 below. 
+		The first two layers of the figure are equally valid for our system, and the remaining two need only minor name changes. 
+		Our database connects to the Django framework which helpfully manages both of the middle layers.
+		While doing this Django also allows user applications to be seperated from data management, and thus keeps the layers seperate. \\
+		\centerline{\includegraphics[scale=0.5]{./images/TPIS}}
 \subsection{Sequence Diagrams }
 	Proceeding every sequence diagram there will be a fully dressed use case outlining the situation for the sequence diagram. 
 	These go together as they are both in Chapter 5 in Section 5.2 "Interaction models" of the textbook.
@@ -84,7 +98,7 @@
 			Frequency of Occurrence & Zero to multiple times per day, based on popularity of system. \\ \hline
 			Miscellaneous & None \\ \hline
 		\end{longtable}
-		\includegraphics[scale=0.75]{./images/loginAndRegister}
+		\centerline{\includegraphics[scale=0.75]{./images/loginAndRegister}}
 	\subsubsection{Posting a Book}	
 		\begin{longtable}{| l | p{8cm} |}
 			\hline
@@ -114,7 +128,7 @@
 			Frequency of Occurrence & Zero to multiple times per day, based on popularity of system. \\ \hline
 			Miscellaneous & None \\ \hline
 		\end{longtable}
-		\includegraphics[scale=0.75]{./images/postBookSequenceDiagram}
+		\centerline{\includegraphics[scale=0.75]{./images/postBookSequenceDiagram}}
 	\subsubsection{Contacting a Seller}
 		\begin{longtable}{| l | p{8cm} |}
 			\hline
@@ -142,7 +156,7 @@
 			Frequency of Occurrence & Zero to multiple times per day, based on popularity of system. \\ \hline
 			Miscellaneous & None \\ \hline
 		\end{longtable}
-		\includegraphics[scale=0.75]{./images/contactSellerSequence}
+		\centerline{\includegraphics[scale=0.75]{./images/contactSellerSequence}}
 	
 \subsection{Class Diagrams (and their relationships)}
 
@@ -238,7 +252,7 @@ HTML and CSS required to give the site its structure and style.
 	\subsection{Overview of Testing}
 		When designing the software test plan it is important to remember the environment that it will be made, and released in.
 		We will start with an exploration of the purpose, expectations, and environment, before proceeding with an in-depth analysis of all the software testing processes used. \\
-		\includegraphics[scale=0.75]{./images/testProcesses} \\
+		\centerline{\includegraphics[scale=0.75]{./images/testProcesses}} 
 		Figure 8.3 from the textbook, showcases a model for software testing.
 		All section numbers in the proceeding discussion refer to Chapter 8 in Software Engineering by Ian Sommerville, Ninth Edition.
 		From the introduction to Chapter 8, we will briefly cover that the software is good for the intended use, by looking at the following.
@@ -266,7 +280,7 @@ HTML and CSS required to give the site its structure and style.
 		We also used pair programming to have concurrent inspections ongoing.
 
 		\subsubsection{Software Inspections (Intro)}
-			\includegraphics[scale=0.75]{./images/inspections} \\
+			\centerline{\includegraphics[scale=0.75]{./images/inspections}} 
 			The above image is figure 8.2 from the textbook. Jeffery Drake was in charge of inspecting and analyzing the software architecture, and database schemas. 
 			Jeffery found sections of code that didn't meet our expected standard for maintainability and efficiency. 
 			This caused many refactors in keeping with certain agile methods to improve the reuse of code from Django, while improving the overall architecture.  
