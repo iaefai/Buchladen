@@ -56,8 +56,94 @@
 
 \subsection{Software Architecture (with diagrams)}
 
-\subsection{Sequence Diagrams}
-
+\subsection{Sequence Diagrams }
+	Proceeding every sequence diagram there will be a fully dressed use case outlining the situation for the sequence diagram. 
+	These go together as they are both in Chapter 5 in Section 5.2 "Interaction models" of the textbook.
+	\subsubsection{Login and Registering}
+		\begin{longtable}{| l | p{8cm} |}
+			\hline
+			Use Case Name & Logging in or Registering \\ \hline
+			Scope & Buchladen Book system \\ \hline
+			Primary Actor & User \\ \hline
+			Stakeholders and Interests & \begin{itemize}
+							\item The user wishes to easily login and a new user wants to be able to get set up quickly.
+							\item The user wants their information secure.
+						     \end{itemize} \\ \hline
+			Preconditions & None \\ \hline
+			Success Guarantee & The login button will change to their username if successful. \\ \hline
+			Main success Scenario & \begin{enumerate}
+							\item The user clicks the login button.
+							\item The user proceeds to fill out the information.
+							\item The user clicks submit.
+							\item The system then checks to see if the user gave valid information or if the username is currently free, and in that case registering and saving it to the database, before proceeding with logging them in.
+							\item A logged in homepage is then shown to the user.
+						\end{enumerate} \\ \hline
+			Extensions & 2a) The user could input the wrong information, in this case they should be prompted to restart at step 2. \newline 4a) The system could have trouble reaching the database, in this case the user should be informed to try back in a little bit. \\ \hline
+			Special Requirements & None \\ \hline
+			Technology and Data Variations List & None \\ \hline
+			Frequency of Occurrence & Zero to multiple times per day, based on popularity of system. \\ \hline
+			Miscellaneous & None \\ \hline
+		\end{longtable}
+		\includegraphics[scale=0.75]{./images/loginAndRegister}
+	\subsubsection{Posting a Book}	
+		\begin{longtable}{| l | p{8cm} |}
+			\hline
+			Use Case Name & Posting a book \\ \hline
+			Scope & Buchladen Book system \\ \hline
+			Primary Actor & User \\ \hline
+			Stakeholders and Interests & \begin{itemize}
+							\item The user wishes to easily post a book for sale.
+							\item The admins wish to have only relevant postings.
+							\item Other users wish to see the information as quickly as possible and be able to purchase the book.
+						     \end{itemize} \\ \hline
+			Preconditions & The user must be registered in the system, and logged in. \\ \hline
+			Success Guarantee & The user will be informed that the posting was successful, and the book will be visible to the public. \\ \hline
+			Main success Scenario & \begin{enumerate}
+							\item The user clicks the post button.
+							\item The user proceeds to fill out the information.
+							\item The user clicks submit.
+							\item The system then retrieves the inputted data.
+							\item The system saves the new book into the database.
+							\item A confirmation webpage is shown to the user.
+						\end{enumerate} \\ \hline
+			Extensions & 1a) The user could not be logged in, in this case the post dialog will fail to open, and the user will have to log in before proceeding with step 1 \newline
+			2a) The user could input the incorrect information. The user will be able to verify and edit the information at a different page. \newline
+			4a) The system could have trouble reaching the databse, in this case a message should be displayed informing the customer to try again later. \\ \hline
+			Special Requirements & None \\ \hline
+			Technology and Data Variations List & None \\ \hline
+			Frequency of Occurrence & Zero to multiple times per day, based on popularity of system. \\ \hline
+			Miscellaneous & None \\ \hline
+		\end{longtable}
+		\includegraphics[scale=0.75]{./images/postBookSequenceDiagram}
+	\subsubsection{Contacting a Seller}
+		\begin{longtable}{| l | p{8cm} |}
+			\hline
+			Use Case Name & Contacting a seller \\ \hline
+			Scope & Buchladen Book system \\ \hline
+			Primary Actor & User \\ \hline
+			Stakeholders and Interests & \begin{itemize}
+							\item The user wishes to contact a seller of a book for sale.
+							\item The admins wish to facilitate the sale without giving away more than required information about the poster or user.
+							\item The seller wishes to be able to sell his book quickly and easily.
+						     \end{itemize} \\ \hline
+			Preconditions & The seller must have posted a book. \\ \hline
+			Success Guarantee & When the user sends teh email they will receive a confirmation page. \\ \hline
+			Main success Scenario & \begin{enumerate}
+							\item The user searches for the book they want and clicks contact seller.
+							\item The user fills in their information for contacting, and then writes the email.
+							\item The user clicks submit.
+							\item The system then retrieves their message and emails it to the seller.
+							\item The user is then directed to a confirmation page.
+						\end{enumerate} \\ \hline
+			Extensions & 2a) The user could choose to contact the seller by phone, this is allowed and the user should proceed by dialing the sellers number. \newline 
+			4a) The system could have trouble reaching the database, in this case the user should be informed to try back in a little bit. \\ \hline
+			Special Requirements & None \\ \hline
+			Technology and Data Variations List & None \\ \hline
+			Frequency of Occurrence & Zero to multiple times per day, based on popularity of system. \\ \hline
+			Miscellaneous & None \\ \hline
+		\end{longtable}
+		\includegraphics[scale=0.75]{./images/contactSellerSequence}
+	
 \subsection{Class Diagrams (and their relationships)}
 
 \section{Technical Documentation}
@@ -151,37 +237,43 @@ HTML and CSS required to give the site its structure and style.
 \section{Software Test Plan}
 	\subsection{Overview of Testing}
 		When designing the software test plan it is important to remember the environment that it will be made, and released in.
-		We will start with an exploration of the purpose, expectations, and environment, before proceeding with an in-depth analysis of all the software testing processes used.
-		\subsubsection{Software Purpose}
+		We will start with an exploration of the purpose, expectations, and environment, before proceeding with an in-depth analysis of all the software testing processes used. \\
+		\includegraphics[scale=0.75]{./images/testProcesses} \\
+		Figure 8.3 from the textbook, showcases a model for software testing.
+		All section numbers in the proceeding discussion refer to Chapter 8 in Software Engineering by Ian Sommerville, Ninth Edition.
+		From the introduction to Chapter 8, we will briefly cover that the software is good for the intended use, by looking at the following.
+		\subsubsection{Software Purpose (Intro)}
 			The purpose of the software is to provide students of the local campus a common place to post and share unneeded textbooks.
 			As well as provide a method for users to contact and arrange the purchase of textbooks they need for their courses. 
 			The system does not control a safety-critical system; rather it brings people together for ease of use. 
 			The software must be reliable in having the correct information for contacting users, and the current offerings of books.
-		\subsubsection{User Expectations}
+		\subsubsection{User Expectations (Intro)}
 			Users expect a seamless experience of browsing for books, contacting sellers if the price point seems reasonable.
 			However because it's a low key system, no personal information besides the user's name and email address and possibility phone numbers are stored.
 			Users will understand if the website or server fails and must be restarted during the launch.
 			However as the system becomes more popular it will be important to upgrade servers and clamp down on bugs because system failures will not be tolerated over other competitors.
 
-		\subsubsection{Marketing environment}
+		\subsubsection{Marketing environment (Intro)}
 			There are quite a few competing products including companies such as, Kijiji, Amazon, saveontextbooks, etc.
 			However there is no website that focuses just on our personal campus so our product fills a niche that exists.
 			So this product will be the true first in its own little area, but with other broader competitors.
 			It therefore requires a decent level of reliability, but some down time or errors will be acceptable as long as they are not to major.
 
-	\subsection{Development Testing}
-
+	\subsection{Development Testing (Section 8.1)}
+		As described in 8.1 Development testing includes any testing down during development by the team working on the system. 
+		For this reason I've included software inspections from the introduction, as well as standard testing approaches from section 8.1.
 		Our testing approach during development was based on each member was responsible for using a defect testing process to find their own errors, but as well we had some helpful tools and tests in place to help ensure defects were found. 
 		We also used pair programming to have concurrent inspections ongoing.
 
-		\subsubsection{Software Inspections}
-			Jeffery Drake was in charge of inspecting and analyzing the software architecture, and database schemas. 
+		\subsubsection{Software Inspections (Intro)}
+			\includegraphics[scale=0.75]{./images/inspections} \\
+			The above image is figure 8.2 from the textbook. Jeffery Drake was in charge of inspecting and analyzing the software architecture, and database schemas. 
 			Jeffery found sections of code that didn't meet our expected standard for maintainability and efficiency. 
 			This caused many refactors in keeping with certain agile methods to improve the reuse of code from Django, while improving the overall architecture.  
 			Matt Renaud was constantly reviewing and analyzing the requirements specification based on the current project, and on iteration meetings with our client as well as the various system prototypes. 
 			Changing the specification and the working design models as needed. 
 			Every member was responsible for at inspections of their own portions of code, and ensuring the entire system still worked together correctly.
-		\subsubsection{Unit Testing}
+		\subsubsection{Unit Testing (Section 8.1.1)}
 
 			Each individual Model we created was tested using Django's automated testing suite, in the style of JUnit tests. 
 			Each class and function within was tested. 
@@ -189,52 +281,52 @@ HTML and CSS required to give the site its structure and style.
 			Expected output was worked out by hand, and then tested against the program output. 
 			Test reports are then automatically generated by Django. 
 
-		\subsubsection{Component Testing}
+		\subsubsection{Component Testing (Section 8.1.3)}
 
 			Some of the components such as Users model, and Forms have innate testing suite, but other models like our book which includes various sub models including Author, and Subjects were tested for their integration and correct overall function. 
 			Again Test cases were developed to ensure that each situation within the model was tested, multiple authors, multiple subjects, or just single, as well as verification that there can be no book without at least one of the previous parts filled out.
 
-		\subsubsection{System Testing}
+		\subsubsection{System Testing (Section 8.1.4)}
 
 			System testing is done almost exclusively through Django's framework; there are 999 tests that test the entire subset of the program interface. 
 			Every template, user, default webpage also including our unit and component tests is also included in that number. 
 			This allows us to have a relatively quick method to ensure our current system build is up to specifications.
 
-	\subsection{Release Testing}
+	\subsection{Release Testing (Section 8.3)}
 
-		Unfortunately we have no separate team to look over our program, however when talking with our client it was stated that the product should be to the level of or close to finished prototype. 
-		Full release testing would be done at a later date. 
+		Unfortunately as described in section 8.3 of the textbook we have no separate team to look over our program for formal release testing.
+		However when talking with our client it was stated that the product should be to the level of or close to finished prototype so full release testing would be done at a later date. 
 		However parts can be implemented currently. 
 
-		\subsubsection{Requirements-based Testing}
+		\subsubsection{Requirements-based Testing (Section 8.3.1)}
 
 			All of our Unit and component testing contain requirement based testing. 
 			Ensuring the correct output that is expected is received. 
 			However other requirements such as performance and scenario require a different approach then unit and component testing can provide.
 
-		\subsubsection{Scenario Testing}
+		\subsubsection{Scenario Testing (Section 8.3.2)}
 
 			Must feature was tested with a use case, and some important features had a sequence diagram designed. 
 			They have been attached earlier in this report. 
 			Testing was done to ensure the main success story of the use case flowed correctly and achieved the desired aim.
 
-		\subsubsection{Performance Testing}
+		\subsubsection{Performance Testing (Section 8.3.3)}
 
 			Again because full release testing is not possible, we have only implemented and tested some parts of the performance of the system. 
 			These can be split into the following.
 
-		\subsubsection{Failure Behaviour}
+		\subsubsection{Failure Behaviour (Section 8.3.3)}
 
 			When the service is not running on the server the response from the server renders a page explaining the page is temporarily unavailable and will be back later. 
 			This will inform the customer of the issues and let the system admin have some time to find errors and correct them.
 
-		\subsubsection{Stress Testing}
+		\subsubsection{Stress Testing (Section 8.3.3)}
 
 			We have been running our website throughout the various development versions uploaded and running in a production environment at Buchladen.uwinsocr.ca with no crashes so far. 
 			Response time is quick and usability and reliability has been found to be excellent. 
 
-	\subsection{User Testing}
-
+	\subsection{User Testing (Section 8.4)}
+		We will split up user testing into two sections one based on the basic alpha and beta testing and then an entire section to acceptance testing, these come from section 8.4 of the text book.
 		\subsubsection{Alpha Testing}
 
 			Every member of the development team was responsible for defect testing, and validation testing of the current tasks they were implementing in that particular iteration. 
@@ -246,7 +338,7 @@ HTML and CSS required to give the site its structure and style.
 			The team asked them to try and think of exceptions and invalid inputs they could use. 
 			They were asked to comment on the functionality and the aesthetics, and changes were made to the project direction resulting from their recommendations.
 
-	\subsection{Acceptance Testing}
+	\subsection{Acceptance Testing (Section 8.4)}
 
 		\subsubsection{Acceptance Criteria}
 
