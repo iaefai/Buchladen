@@ -21,6 +21,8 @@
 \usepackage{setspace}
 \onehalfspacing
 
+\usepackage{enumitem}
+
 \title{03-60-311 Final Report}
 \author{Matt Clifford, Jeff Drake, Jeremy High, Stephen Nusko, Matt Renaud}
 \date{\today}
@@ -42,45 +44,282 @@
 \tableofcontents
 \vspace*{1cm}
 
+% \listoffigures
+
+\newpage
 \section{Introduction}
-\label{sec-introduction}
+\label{sec:introduction}
+
+This final report seeks to outline and explain the techniques,
+technologies, and models used by our team to design and implement the
+required task given for the 60-311 final project. It will outline the
+functional and non-functional software requirements for the problem,
+detail the software architecture used in the project, and provide
+useful diagrams throughout. Technical documentation will be provided
+through the explanation of the programming languages and platform
+used, as well as the algorithms, tools, environment, and database we
+chose to utilize. In addition, documentation for a user will be laid
+out in the form of a walkthrough with helpful images. Finally, the
+methods and plans for testing the system will be described in detail.
 
 \subsection{Problem Statement}
-\label{sec-prodlem-statement}
+\label{sec:prodlem-statement}
+
+Our team was tasked to create an online used textbook store for
+University of Windsor students. A used textbook store specific to the
+University of Windsor would be a valuable asset because as textbook
+and tuition costs continue to rise, used books provide a cheaper and
+equally functional alternative to spending an exorbitant amount of
+money on new books. Thus a free-to-use online store was developed to
+meet the needs of University of Windsor students.
+
+The users of our system were to have the ability to create, edit and
+delete book postings, as well as the ability to browse postings from
+other users. Users were thus required to be able to register an
+account, log in to the system, log out, and contact other user’s about
+their postings. In addition to these initial requirements, the users
+had to be able to keep an inventory of the postings associated with
+their account.
 
 \subsection{Project Overview}
-\label{sec-project-overview}
+\label{sec:project-overview}
 
-\subsection{Release Notes Summarizing the Last Transition}
-\label{sec-release-notes}
+Our team developed a website accessible over the Internet to meet the
+requirements of the above problem statement. The system was created on
+a Linux server using primarily Python as a development language. The
+use of the MVC-like web application framework Django greatly
+simplified the development process, as its built-in development and
+debugging features allowed us to rely on a heavily reuse-oriented
+approach. The database system was handled by the Django framework, and
+the framework allowed the individual HTML pages to be automatically
+generated from templates as specified by each page’s definition.
 
+
+\subsection{Release Notes Summarizing the Last Iteration}
+\label{sec:release-notes}
+
+New Features:
+
+\begin{itemize}
+\item Users are now capable of registering, logging in, and logging
+  out through simple forms on the website.
+\item Users are now capable of posting, editing, and deleting their
+  own book postings. Posting is available through a simple form
+  accessible from the top of the page, and editing and removing is
+  available on the user’s profile page.
+\item Users are now capable of posting, editing, and deleting their
+  own book postings. Posting is available through a simple form
+  accessible from the top of the page, and editing and removing is
+  available on the user’s profile page.
+\item Search functionality is improved, allowing users to search using
+  tags such as ``author:MyAuthor'' in order to search within specific
+  fields. Search by substring is also available.
+\item Search functionality has been modified to dynamically update the
+  search results page while search terms are being entered. This
+  provides a much more fluid experience for the user.
+\end{itemize}
+
+
+\newpage
 \section{Software Requirements}
-\label{sec-software-reqs}
+\label{sec:software-reqs}
 
+\subsection{Functional Requirements}
+\label{sec:functional-reqs}
+
+Functional requirements describe the services that the system should
+contain, how it should act in response to specific input, how it
+performs in certain conditions, and how not to perform in certain
+conditions.
+
+\subsubsection{User Requirements Definition}
+\label{sec:user-reqs}
+
+User requirements are functional requirements that are described in
+such a way that they can be easily understood by the system users.
+
+A user shall be able to:
+
+\begin{enumerate}
+\item Search the book list by four different fields: author, subject, title, and ISBN. 
+\item Create an account on the system
+\item Log into the system easily
+\item Log out of the system easily
+\item Manage their own inventory
+\item Contact another user via the contact seller button
+\end{enumerate}
+
+An administrator shall be able to:
+
+\begin{enumerate}
+\item Enter the administrator panel
+\item Edit or remove any book in the system
+\item Edit or remove users
+\end{enumerate}
+
+\subsubsection{System Requirements Specification}
+\label{sec:sys-reqs}
+
+System requirements are used to describe the system functions and
+environmental expectations in detail.
+
+1.1. Upon writing the query and pressing return, a list of all
+    available books matching the criteria provided by the user shall
+    be generated.
+
+1.2. The system shall construct the list of items based on which search terms were selected
+
+1.3. Each item shall contain a title, author list, subject list, ISBN, publisher, price, and contact seller button
+
+2.1. On entering their information and hitting return, a user shall be registered in the system
+
+2.2. The system shall read in the information and check it against the current user list
+
+2.3. If the information is not currently in the system, it shall be added and the user registered
+
+2.4. If the information is currently in the system, it shall not be added
+
+2.5. The system shall display whether or not the request succeeded for the user to see
+
+3.1. On entering their information and hitting return, a user shall be logged into the system
+
+3.2. The system shall read the input information and check the registered user list for a username and password match
+
+3.3. If a match is found, the system shall log the user in, the page updating accordingly
+
+3.4. If a match is not found, the user shall be prompted to fill in the form again
+
+4.1. The user shall be logged out upon clicking the logout button
+
+4.2. The system shall end that user’s session and update the page accordingly
+
+5.1. Upon clicking the correct button, the user shall be able to manage their inventory
+
+5.2. If the user posts a book, the system shall add a new book to its database
+
+5.3. If the user removes a book, the system shall search the database for that book and remove it
+
+5.4. If the user edits a book, the system shall search the database for that book and make changes 
+
+to the field specified
+
+5.5. The system shall notify the user by updating the page appropriately
+
+6.1. Upon click the contact seller button from the booklist, the user shall be able to make contact with the seller
+
+6.2. The user shall be prompted to fill out a form requiring their email address and asking for a phone number, the user’s availability, and the message they wish to send to the seller
+
+6.3. If the user input an invalid email address or phone number, the system shall display a message informing them of such
+
+6.4. The system shall send the information to the seller using email and display the success to the user
+
+7.1. An administrator shall be able to enter the control panel where they may perform admin-specific actions
+
+7.2. The admin shall input their username and password before clicking submit or hitting the return key
+
+7.3. The system shall check that the information given is valid
+
+7.4. If the username and password are invalid, the administrator shall be denied entry
+
+7.5. If the username and password are valid, the administrator shall be granted access to the panel
+
+8.1. Upon clicking the book menu, the administrator shall have the ability to edit or remove any book
+
+8.2. If the admin selects the edit option, the system shall prompt them for the changes to be made
+
+8.3. If the admin select the remove option, the system shall prompt them to confirm this selection
+
+8.4. The system shall perform the operation specified and update the database as required
+
+9.1. Upon clicking the user menu, the administrator shall have the ability to edit or remove any user
+
+9.2. If the edit option is selected, the system shall prompt the admin for the changes to be made
+
+9.3. If the remove option is selected, the system shall prompt for confirmation of this action
+
+9.4. The system shall perform the operation specified and update the
+database as required
+
+\subsection{Non-functional Requirements}
+\label{sec:non-func-reqs}
+
+Non-functional requirements are the limitations on the features
+offered by the system. These limits constrain timing considerations,
+developmental processes and those imposed by standards. They generally
+apply to the whole system.
+
+\subsubsection{Product Requirements}
+
+Product requirements specify how the software acts in particular situations.
+
+\begin{itemize}
+\item The Buchladen system shall be available to all users at any time, barring maintenance
+\item The system shall be useable by anybody that wishes to use it, though intended to be used locally
+\item The user groups shall consist of both general users and administrators
+\item The system shall be able to be understood and useable within seconds
+\item The system shall not exceed 3 seconds for any operation
+\item The system shall succeed in its operation 99.5% of the time
+
+\end{itemize}
+
+\subsubsection{Organizational Requirements}
+
+Organizational requirements are based on systems and guidelines in the customer’s and developer’s organizations.
+
+\begin{itemize}
+\item The development team shall be responsible for system maintenance
+\item The system shall be used to buy and sell textbooks exclusively
+\item The system shall use the Django framework for Python
+\item The system shall be useable by any modern web browser
+\end{itemize}
+
+
+\subsubsection{External Requirements}
+
+External requirements are based on circumstances external to the system and its creation.
+
+\begin{itemize}
+\item The administration shall disallow inflammatory usernames and ``trolling''
+\item The system shall not allow any user access to another user’s personal information
+\end{itemize}
+
+\subsection{Use Case Diagram}
+
+Use case diagrams are used to show each separate interaction between
+the system and its users.
+
+\vspace{0.2in}
+
+\centerline{\includegraphics[scale=0.7]{./images/use-case.png}} 
+
+
+\newpage
 \section{Design Specification}
-\label{sec-design-specs}
+\label{sec:design-specs}
 
 \subsection{Software Architecture (Chapter 6)}
-\label{sec-software-architecture}
+\label{sec:software-architecture}
 
 	As suggested in Chapter 6 Section 6.2 of the textbook, a full 4 + 1 view of the architecture is overly extensive for an agile approach.
 	We therefore will focus on some patterns that we found helpful in understanding the design of our system.
 	\subsubsection{Model-View-Controller (Section 6.2)}
 		The Model-View-Controller pattern was found to be very applicable, and useful in separation of the data and representation. 
-		See figure 6.4 below. 
+		See figure 6.4 from the textbook below. 
 		The model part is based on our SQLite database, while our controller was the Django framework which handled all HTTP requests and application logic. 
 		While the use of Ajax allowed for dynamically generating the page and forms as needed. \\
-		\centerline{\includegraphics[scale=0.5]{./images/MVC}}
+		\centerline{\includegraphics[scale=0.5]{./images/MVC.JPG}}
 	\subsubsection{Application architectures}
 		When we discussed the design of our application and studied system outlines, we found from Section 6.4.2 that our program as a web application is very much an information system, with a shared database which connects through layers to the user. 
-		See figure 6.17 below. 
+		See figure 6.17 from the textbook below. 
 		The first two layers of the figure are equally valid for our system, and the remaining two need only minor name changes. 
 		Our database connects to the Django framework which helpfully manages both of the middle layers.
 		While doing this Django also allows user applications to be seperated from data management, and thus keeps the layers seperate. \\
-		\centerline{\includegraphics[scale=0.5]{./images/TPIS}}
+
+                
+		\centerline{\includegraphics[scale=0.5]{./images/TPIS.JPG}}
 
 \subsection{Sequence Diagrams }
-\label{sec-sequence-diagrams}
+\label{sec:sequence-diagrams}
 Proceeding every sequence diagram there will be a fully dressed use case outlining the situation for the sequence diagram. 
 	These go together as they are both in Chapter 5 in Section 5.2 "Interaction models" of the textbook.
 	\subsubsection{Login and Registering}
@@ -108,7 +347,8 @@ Proceeding every sequence diagram there will be a fully dressed use case outlini
 			Frequency of Occurrence & Zero to multiple times per day, based on popularity of system. \\ \hline
 			Miscellaneous & None \\ \hline
 		\end{longtable}
-		\centerline{\includegraphics[scale=0.75]{./images/loginAndRegister}}
+		\centerline{\includegraphics[scale=0.6]{./images/loginAndRegister.JPG}}
+        \newpage                
 	\subsubsection{Posting a Book}	
 		\begin{longtable}{| l | p{8cm} |}
 			\hline
@@ -138,7 +378,10 @@ Proceeding every sequence diagram there will be a fully dressed use case outlini
 			Frequency of Occurrence & Zero to multiple times per day, based on popularity of system. \\ \hline
 			Miscellaneous & None \\ \hline
 		\end{longtable}
-		\centerline{\includegraphics[scale=0.75]{./images/postBookSequenceDiagram}}
+
+		\centerline{\includegraphics[scale=0.6]{./images/postBookSequenceDiagram.JPG}}
+
+        \newpage
 	\subsubsection{Contacting a Seller}
 		\begin{longtable}{| l | p{8cm} |}
 			\hline
@@ -166,13 +409,16 @@ Proceeding every sequence diagram there will be a fully dressed use case outlini
 			Frequency of Occurrence & Zero to multiple times per day, based on popularity of system. \\ \hline
 			Miscellaneous & None \\ \hline
 		\end{longtable}
-		\centerline{\includegraphics[scale=0.75]{./images/contactSellerSequence}}
-	
-\subsection{Class Diagrams (and their relationships)}
-\label{sec-class-diagrams}
+		\centerline{\includegraphics[scale=0.6]{./images/contactSellerSequence.JPG}}
 
+\newpage                
+\subsection{Class Diagrams}
+\label{sec:class-diagrams}
+\centerline{\includegraphics[scale=1]{./images/class-diagram.pdf}}
+
+\newpage
 \section{Technical Documentation}
-\label{sec-technical-docs}
+\label{sec:technical-docs}
 
 In this section we present several technical aspects of the online
 used book store that we have designed and developed.  We begin by
@@ -185,7 +431,7 @@ the section with an overview of the database tables and schema that we
 used for the persistent storage of data.
 
 \subsection{Programming Language and Platform}
-\label{sec-language-and-platform}
+\label{sec:language-and-platform}
 
 We made the decision to deploy our web application on the GNU/Linux
 platform, it is currently hosted on the University of Windsor's
@@ -206,7 +452,7 @@ would ease the development and debugging process and as a result we
 decided to use Django, a web application framework written in Python.
 
 \subsubsection{Django}
-\label{sec-django}
+\label{sec:django}
 
 Although none of our group members were incredibly familiar with
 Python, we anticipated that the time saved by using a framework would
@@ -216,7 +462,7 @@ use Django was an excellent decision and allowed us to focus more of
 our time on implementing features than on writing all aspects of the
 system from the ground up and reinventing the wheel.
 
-Django is described on its website (see Section~\vref{sec-reference})
+Django is described on its website (see Section~\vref{sec:reference})
 as:
 
 \begin{quotation}
@@ -236,7 +482,7 @@ system.
 
 
 \subsection{Ajax}
-\label{sec-ajax}
+\label{sec:ajax}
 
 In addition to the languages that we used, we also took advantage of
 several web technologies in order to modernize our website. The one
@@ -258,7 +504,7 @@ and CSS over again saves bandwidth as well as decreases the time
 required to view the latest results. 
 
 \subsection{Development Tools}
-\label{sec-development-tools}
+\label{sec:development-tools}
 
 In order to develop the web application, some of the members of our
 group used a python development environment called PyCharm which has
@@ -268,17 +514,110 @@ HTML and CSS required to give the site its structure and style.
 
 
 \subsection{Database Tables and Schema}
-\label{sec-database-schema}
+\label{sec:database-schema}
 
+
+\subsubsection{Object Relational Mapping}
+\label{sec:orm}
+
+The software framework being used, django, contains an
+Object-relational Mapper (ORM) library that automates the conversation
+between the application and the backend database. We define an Object
+model, deriving from the builtin Model class, specifying field types
+and relations. On startup, django will validate our model with what
+already exists, and can migrate any changes over – allowing changes to
+minimize difficulty. When we query the models using a built filter and
+orderby methods, django constructs a single query potentially
+involving multiple models. Likewise, inserting data is done by
+creating an instance of an object model, and saving it when it is
+done.
+
+\newpage
 \section{User Documentation}
-\label{sec-user-docs}
+\label{sec:user-docs}
 
+\centerline{\includegraphics[scale=0.3]{./images/walkthrough-1.jpg}}
+
+\vspace{0.1in}
+
+When Buchladen starts up, we can search, post, or register/login.  A
+regular website visitor would start off by searching for a book they
+were interested in finding.  This user, searching for C++, would click
+on the search field, enter ``C++''. The user does not need to press
+enter, as it live updates.
+
+\vspace{0.2in}
+
+\centerline{\includegraphics[scale=0.3]{./images/search.jpg}}
+
+\vspace{0.1in}
+
+If this is the book the user was interested in, they would click on
+``Contact Seller'', which would allow them to send a message enquiring
+about the book.
+
+\vspace{0.2in}
+
+\centerline{\includegraphics[scale=0.7]{./images/contact-seller.jpg}}
+
+\vspace{0.1in}
+
+The user is free to search for more books on the search field, if they
+wanted to register to post a book for sale they would click on
+``Register'':
+
+\vspace{0.2in}
+
+\centerline{\includegraphics[scale=0.5]{./images/register.jpg}}
+
+\vspace{0.1in}
+
+The user would insert their details and register. If they were already
+a member, they could login with the same screen on the right. When
+they press the appropriate button, they will be logged in and their
+name will show up on the user menu (only used for logout thus far).
+
+\vspace{0.2in}
+
+\centerline{\includegraphics[scale=0.3]{./images/walkthrough-1.jpg}}
+
+\vspace{0.1in}
+
+When the user wants to post a book, they click on ``post'' and the
+dialog comes up indicating the information required to post a book.
+
+\vspace{0.2in}
+
+\centerline{\includegraphics[scale=0.5]{./images/post-book.jpg}}
+
+\vspace{0.1in}
+
+The book will show up immediately when searched for.
+
+When an administrator needs to remove a user or book, the admin
+interface can be used:
+
+\vspace{0.2in}
+
+\centerline{\includegraphics[scale=0.45]{./images/admin-panel.jpg}}
+
+\vspace{0.1in}
+
+\vspace{0.2in}
+
+\centerline{\includegraphics[scale=0.35]{./images/admin-item-list.jpg}}
+
+\vspace{0.1in}
+
+
+
+\newpage
 \section{Software Test Plan}
-\label{sec-software-test-plan}
+\label{sec:software-test-plan}
 	\subsection{Overview of Testing}
 		When designing the software test plan it is important to remember the environment that it will be made, and released in.
 		We will start with an exploration of the purpose, expectations, and environment, before proceeding with an in-depth analysis of all the software testing processes used. \\
-		\centerline{\includegraphics[scale=0.75]{./images/testProcesses}} 
+		\centerline{\includegraphics[scale=0.75]{./images/testProcesses.JPG}} 
 		Figure 8.3 from the textbook, showcases a model for software testing.
 		All section numbers in the proceeding discussion refer to Chapter 8 in Software Engineering by Ian Sommerville, Ninth Edition.
 		From the introduction to Chapter 8, we will briefly cover that the software is good for the intended use, by looking at the following.
@@ -306,7 +645,7 @@ HTML and CSS required to give the site its structure and style.
 		We also used pair programming to have concurrent inspections ongoing.
 
 		\subsubsection{Software Inspections (Intro)}
-			\centerline{\includegraphics[scale=0.75]{./images/inspections}} 
+			\centerline{\includegraphics[scale=0.75]{./images/inspections.JPG}} 
 			The above image is figure 8.2 from the textbook. Jeffery Drake was in charge of inspecting and analyzing the software architecture, and database schemas. 
 			Jeffery found sections of code that didn't meet our expected standard for maintainability and efficiency. 
 			This caused many refactors in keeping with certain agile methods to improve the reuse of code from Django, while improving the overall architecture.  
@@ -404,10 +743,44 @@ HTML and CSS required to give the site its structure and style.
 
 		\subsubsection{Reject/Accept System}
 			The system has been submitted to the client for final review and acceptance.
+
+
+\newpage
+\section{Last Minute Change Request}
+\label{sec:last-minute-change-request}
+
+In the last iteration meeting, we were tasked with extending the
+application to allow students from St. Clair College to post books as
+well. When we were designing the application, we spent some time
+ensuring that if a change was needed that only a small amount of time
+and effort would be required to implement it. As a result, in order to
+extend the application to allow for multiple locations we would only
+need to change a few pieces of the website.
+
+First, on the form to post a book, there would be a field where one
+could specify which location they are on so that someone searching for
+a book can limit their search to a specific campus. As this is stored
+along with the book information, the book model would have to be
+changed to contain a new field but since Django handles the ORM, the
+only thing that would need to be done is to re-build the database
+which is handled by the framework.
+
+In the presentation of the books that are being listed, the HTML would
+need to be modified to include a spot for the location of the seller
+and the CSS would have to be updated accordingly.
+
+Other than that, no other major changes would need to be made to the
+code, so as it turns out, planning for change early in the design
+processs would save time as new requirements are added at a later
+date.
+
+
+\newpage
 \section{Reference}
-\label{sec-reference}
+\label{sec:reference}
 
 \begin{description}
+\item[Web Application] \href{http://buchladen.uwinsocr.ca/}{http://buchladen.uwinsocr.ca/}
 \item[Python Tutorial] \href{http://docs.python.org/3/tutorial/}{http://docs.python.org/3/tutorial/}
 \item[Django Homepage] \href{https://www.djangoproject.com/}{https://www.djangoproject.com/}
 \item[Unit Test] \href{https://docs.djangoproject.com/en/dev/topics/testing/}{https://docs.djangoproject.com/en/dev/topics/testing/}
