@@ -1,23 +1,23 @@
-from nap import models, fields, api, serialiser, publisher
+from nap import models, serialiser
 from django.contrib.auth.models import User
 
 from .models import Subject, Author, Book
 
-class SubjectSerializer(models.ModelSerialiser):
+class SubjectSerializer(serialiser.ModelSerialiser):
     class Meta:
         model = Subject
 
-class AuthorSerializer(models.ModelSerialiser):
+class AuthorSerializer(serialiser.ModelSerialiser):
     class Meta:
         model = Author
 
-class BookSerializer(models.ModelSerialiser):
-    authors  = models.ModelManySerialiserField('authors.all', model=Author)
-    subjects = models.ModelManySerialiserField('subjects.all', model=Subject)
-    user = models.ModelSerialiserField(model=User)
+class BookSerializer(serialiser.ModelSerialiser):
+    authors  = serialiser.ModelManySerialiserField('authors.all', model=Author)
+    subjects = serialiser.ModelManySerialiserField('subjects.all', model=Subject)
+    user = serialiser.ModelSerialiserField(model=User)
     class Meta:
         model = Book
 
-class UserSerializer(models.ModelSerialiser):
+class UserSerializer(serialiser.ModelSerialiser):
     class Meta:
         model = User

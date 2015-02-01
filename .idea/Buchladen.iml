@@ -6,12 +6,13 @@
         <option name="rootFolder" value="$MODULE_DIR$" />
         <option name="settingsModule" value="Buchladen/settings.py" />
         <option name="manageScript" value="manage.py" />
+        <option name="environment" value="&lt;map/&gt;" />
       </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Python 3.3.2 virtualenv at ~/Code/Python/py3" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 3.4.2 virtualenv at ~/Code/Python/Python342" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="sass-stdlib" level="application" />
   </component>
@@ -27,8 +28,6 @@
     </option>
   </component>
   <component name="TestRunnerService">
-    <option name="projectConfiguration" value="Unittests" />
     <option name="PROJECT_TEST_RUNNER" value="Unittests" />
   </component>
 </module>
-

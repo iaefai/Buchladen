@@ -67,7 +67,8 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = '/webroot/buchladen/static'
+#STATIC_ROOT = '/webroot/buchladen/static'
+STATIC_ROOT = os.path.join(basedir, "static_home")
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -109,6 +110,8 @@ MIDDLEWARE_CLASSES = (
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
+
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 ROOT_URLCONF = 'Buchladen.urls'
 

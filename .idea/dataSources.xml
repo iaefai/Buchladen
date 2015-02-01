@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1399989050">
+  <component name="DataSourceManagerImpl" format="xml" hash="4067535981">
     <data-source source="LOCAL" name="Django default" uuid="e5761267-ee63-4370-a895-301d5bcb746b">
+      <driver-ref>sqlite.xerial</driver-ref>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/Buchladen/../books.sqlite</jdbc-url>
-      <libraries>
-        <library>
-          <url>file://$USER_HOME$/Library/Preferences/PyCharm30/jdbc-drivers/xerial-sqlite-license.txt</url>
-        </library>
-        <library>
-          <url>jar://$USER_HOME$/Library/Preferences/PyCharm30/jdbc-drivers/sqlite-jdbc-3.7.6.3-20110609.081603-3.jar!/</url>
-        </library>
-      </libraries>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Django default2" uuid="14957a06-9e51-4a4c-ac12-21aac2da5527">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/Buchladen/../books.sqlite</jdbc-url>
+      <libraries />
     </data-source>
   </component>
 </project>
-
